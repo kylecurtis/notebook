@@ -2,7 +2,7 @@
 
 <br>
 
-### Computer Science Notes
+### computer-science/
 
 <br>
 
