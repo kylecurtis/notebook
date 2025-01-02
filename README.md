@@ -20,5 +20,6 @@
     - `01-basics/hello-world`: Breakdown of a basic Go program
     - `01-basics/variables`: Variables and constants
     - `02-data-types/integers`: Signed and unsigned integers
+    - `02-data-types/floats`: Floating point numbers
 
     </details>
