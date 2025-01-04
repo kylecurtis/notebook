@@ -19,7 +19,7 @@
 ### `operating-systems/`
 
 - <details>
-    <summary><strong>archbtw</strong></summary>
+    <summary><strong>archbtw/</strong></summary>
 
     - `install`: Arch installation notes
 
