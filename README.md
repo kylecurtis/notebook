@@ -14,6 +14,17 @@
 
 </details>
 
+<br>
+
+### `operating-systems/`
+
+- <details>
+    <summary><strong>archbtw</strong></summary>
+
+    - `install`: Arch installation notes
+
+</details>
+
 
 <br>
 
