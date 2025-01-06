@@ -25,6 +25,12 @@
 
 </details>
 
+- <details>
+    <summary><strong>windows/</strong></summary>
+
+    - `security/firewall`: Firewall settings with PowerShell
+
+</details>
 
 <br>
 
