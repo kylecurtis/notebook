@@ -13,7 +13,7 @@ Through this assignment, you will:
 
 <br>
 
-## Game Steps
+## Game Steps (Cloud First Steps)
 
 - Download lab files
 - Set region to N Virginia (us-east-1)
@@ -40,3 +40,40 @@ Through this assignment, you will:
 - Click the checkbox for webserver01
 - Verify "Running", then under Public IPv4 DNS, click the copy button (NOT "open address")
 - In new tab, paste 
+
+<br>
+
+---
+
+<br>
+
+## Game Steps (Cloud Computing Solutions - Scaling)
+
+- Set region to N. Virginia (us-east-1)
+- Search for and open EC2
+- Click Instances and check the AWS Computing Solutions box
+- Click details tab
+- Click Instance Types (Left)
+- In the filter box, search: t3.large, c5.large, r5.large and select the 3 boxes
+- Click Instances (Left)
+- Click the box for AWS Computing Solutions
+- Under details, select (copy) the public IPv4 address and paste in a new tab (http not https)
+- Click "Connect" at the top
+- Click "Session Manager" and "Connect" button
+
+```sh
+sudo -i
+cd ../home/ec2-user/sample_app
+ls
+tail -lf aws_compute_solutions.log
+```
+
+- Ctrl + C to quit then close terminal to return to Instances page
+- Click Actions dropdown menu -> Instance settings -> Edit user data
+- Review commands (bash script), then click Cancel
+- Click Instances (left), click Instance state dropdown -> Stop instance
+- In the pop-up choose "Stop"
+- In Details tab, review IPv4 and DNS -> Should be empty
+- Click Instance state dropdown -> Start instance
+- IPv4 and DNS should be populated
+- General steps: Take offline -> Change instance type
