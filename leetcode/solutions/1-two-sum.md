@@ -1,56 +1,21 @@
-## Problem Description
+## C++ Code Solution
 
-Given an array of integers `nums` and an integer `target`, return _indices of the two numbers such that they add up to `target`_.
+```cpp
+class Solution {
+public:
+    vector<int> twoSum(vector<int> &nums, int target) {
+        unordered_map<int, int> m;
 
-You may assume that each input would have **_exactly_ one solution**, and you may not use the _same_ element twice.
-
-You can return the answer in any order.
-
-**Example 1:**
-
-**Input:** nums = [2,7,11,15], target = 9
-**Output:** [0,1]
-**Explanation:** Because nums[0] + nums[1] == 9, we return [0, 1].
-
-**Example 2:**
-
-**Input:** nums = [3,2,4], target = 6
-**Output:** [1,2]
-
-**Example 3:**
-
-**Input:** nums = [3,3], target = 6
-**Output:** [0,1]
-
-**Constraints:**
-
-- `2 <= nums.length <= 104`
-- `-109 <= nums[i] <= 109`
-- `-109 <= target <= 109`
-- **Only one valid answer exists.**
-
-**Follow-up:** Can you come up with an algorithm that is less than $O(n^2)$ time complexity?
-
-<br>
-
----
-
-<br>
-
-## Code Solution
-
-```python
-from typing import List
-
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        seen = {}
-        for index, value in enumerate(nums):
-            complement = target - value
-            if complement in seen:
-                return [seen[complement], index]
-            seen[value] = index
-        return []
+        for (int i = 0; i < nums.size(); i++) {
+            int complement = target - nums[i];
+            if (m.find(complement) != m.end()) {
+                return {m[complement], i};
+            }
+            m[nums[i]] = i;
+        }
+        return {};
+    }
+};
 ```
 
 <br>
@@ -59,18 +24,27 @@ class Solution:
 
 <br>
 
-## Line-by-Line Explanation
+## Enhanced Line-by-Line Explanation
 
-### 1. Function Definition
+### 1. Class Declaration & Function Signature
 
-```python
-def twoSum(self, nums: List[int], target: int) -> List[int]:
+```cpp
+class Solution {
+public:
+    vector<int> twoSum(vector<int> &nums, int target) {
 ```
 
-- **Purpose:** Defines the function `twoSum` which takes:
-  - `nums`: A list of integers.
-  - `target`: An integer representing the target sum.
-- **Return Type:** Returns a list containing two integers representing indices of the numbers.
+- **Class & Access Modifier:**
+    
+    - The `Solution` class encapsulates the function, adhering to LeetCode's expected format.
+    - `public:` ensures that the `twoSum` method is accessible to external code (like the testing framework).
+- **Function Signature:**
+    
+    - **Parameters:**
+        - `vector<int> &nums`: Passed by reference to avoid copying the entire array, which improves efficiency, especially for large inputs.
+        - `int target`: The integer sum we are trying to achieve by adding two numbers from `nums`.
+    - **Return Type:**  
+        A `vector<int>` containing exactly two indices that correspond to the two numbers summing to `target`.
 
 <br>
 
@@ -78,14 +52,18 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 
 <br>
 
-### 2. Initialize `seen` Dictionary
+### 2. Initialize the Hash Table
 
-```python
-seen = {}
+```cpp
+unordered_map<int, int> m;
 ```
 
-- **Purpose:** `seen` is a dictionary to store numbers encountered so far as keys, and their indices as values.
-- **Why?** This enables efficient lookup for the complement of the current number in `O(1)` time.
+- **Purpose:**  
+    Creates an `unordered_map` (a hash table) named `m` where:
+    - **Key:** An integer value from `nums`.
+    - **Value:** The index of that integer in the array.
+- **Why Use a Hash Table?**  
+    The hash table allows constant average time (`O(1)`) lookups to quickly check if the complement of the current number exists among the numbers we've already processed.
 
 <br>
 
@@ -93,16 +71,20 @@ seen = {}
 
 <br>
 
-### 3. Loop Through `nums`
+### 3. Iterate Through the Array
 
-```python
-for index, value in enumerate(nums):
+```cpp
+for (int i = 0; i < nums.size(); i++) {
 ```
 
-- **Purpose:** Iterates through the `nums` array with:
-  - `index`: The current index in the array.
-  - `value`: The value of the element at the current index.
-- **Why?** Allows us to examine each number and calculate its complement relative to the target.
+- **Loop Explanation:**
+    
+    - Iterates over the vector `nums` using the index `i`.
+    - **Why Use a For-Loop with Indices?**  
+        Accessing elements by index is necessary because we need to return the indices of the elements, not the values themselves.
+- **Efficiency Note:**  
+    This single loop ensures that we traverse the list only once, contributing to an overall time complexity of **O(n)**.
+    
 
 <br>
 
@@ -110,14 +92,19 @@ for index, value in enumerate(nums):
 
 <br>
 
-### 4. Calculate Complement
+### 4. Calculate the Complement
 
-```python
-complement = target - value
+```cpp
+int complement = target - nums[i];
 ```
 
-- **Purpose:** Calculates the `complement`, which is the value needed to reach the `target` when added to `value`.
-- **Why?** To determine if this complement already exists in the dictionary `seen`.
+- **Purpose:**  
+    Computes the **complement** which is the number needed (when added to `nums[i]`) to reach the `target`.
+    
+- **Detailed Reasoning:**
+    
+    - If `nums[i]` is one of the two numbers required, then the other number must be `target - nums[i]`.
+    - Storing and using this value is crucial to determine if a previously seen number completes the pair.
 
 <br>
 
@@ -125,18 +112,23 @@ complement = target - value
 
 <br>
 
-### 5. Check for Complement
+### 5. Check if the Complement Exists
 
-```python
-if complement in seen:
-    return [seen[complement], index]
+```cpp
+if (m.find(complement) != m.end()) {
+    return {m[complement], i};
+}
 ```
 
-- **Purpose:** Checks if the `complement` is already stored in `seen`.
-- **If True:** Returns the indices:
-  - `seen[complement]`: The index of the complement stored in the dictionary.
-  - `index`: The current index of the number in the loop.
-- **Why?** This ensures we find the indices of the two numbers that add up to `target`.
+- **Lookup Explanation:**
+    - `m.find(complement)` searches the hash table for the `complement`.
+    - If the iterator returned is **not equal** to `m.end()`, it indicates that the `complement` exists in the hash table.
+- **Return Statement Details:**
+    - If the complement is found, the solution is immediately returned as a vector containing two indices:
+        - `m[complement]`: The index where the complement was previously stored.
+        - `i`: The current index of `nums[i]`.
+- **Efficiency Note:**  
+    This constant-time lookup is a key reason for the overall linear time complexity.
 
 <br>
 
@@ -144,14 +136,21 @@ if complement in seen:
 
 <br>
 
-### 6. Add Current Value to `seen`
+### 6. Add the Current Number and its Index to the Hash Table
 
-```python
-seen[value] = index
+```cpp
+m[nums[i]] = i;
 ```
 
-- **Purpose:** Adds the current `value` as a key in `seen`, with its corresponding `index` as the value.
-- **Why?** Updates the dictionary with the latest number and its index for future lookups.
+- **Purpose:**  
+    After checking for a valid pair, the current number (`nums[i]`) and its index (`i`) are added to the hash table.
+    
+- **Detailed Explanation:**
+    
+    - **Future Lookup:**  
+        This step ensures that for every subsequent number in the array, the current number is available as a potential complement.
+    - **Handling Duplicates:**  
+        Even if the same number appears more than once, the first valid pair will be found because the complement check happens before insertion. In cases like `[3, 3]` with `target = 6`, the first `3` is stored, and when the second `3` is processed, its complement (which is also `3`) is found in the hash table.
 
 <br>
 
@@ -159,13 +158,21 @@ seen[value] = index
 
 <br>
 
-### 7. Return (Not Used in This Case)
+### 7. Fallback Return Statement
 
-```python
-return []
+```cpp
+return {};
 ```
 
-- **Purpose:** A safeguard to return an empty list if no solution is found (though guaranteed by the problem constraints).
+- **Purpose:**  
+    Provides a return statement that outputs an empty vector.
+    
+- **Why Include This Line?**
+    
+    - **Completeness:**  
+        Although the problem guarantees exactly one solution, this return statement is necessary to satisfy all code paths and maintain proper function syntax.
+    - **Safety:**  
+        Acts as a safeguard if, due to some unforeseen circumstance, no valid pair is found.
 
 <br>
 
@@ -177,16 +184,17 @@ return []
 
 ### Time Complexity: **O(n)**
 
-- **Why?**
-  - The function iterates through the `nums` list exactly once (`O(n)`).
-  - Lookup and insertion into the dictionary are both `O(1)` operations.
-- **Total:** `O(n)` for the loop.
+- **Rationale:**
+    - The algorithm processes each element in the array exactly once.
+    - Both insertion and lookup in the `unordered_map` are average **O(1)** operations.
+- **Overall:**  
+    The combined operations result in **O(n)** time complexity.
 
 ### Space Complexity: **O(n)**
 
-- **Why?**
-  - The `seen` dictionary can store up to `n` elements in the worst case, where `n` is the length of `nums`.
-- **Total:** `O(n)` for the dictionary.
+- **Rationale:**
+    - In the worst-case scenario, the hash table may store every element of the array.
+    - Thus, space usage grows linearly with the input size.
 
 <br>
 
@@ -196,32 +204,20 @@ return []
 
 ## Example Walkthrough
 
-### Input: `nums = [2, 7, 11, 15], target = 9`
+**Input:** `nums = [2, 7, 11, 15]`, `target = 9`
 
 1. **Initialization:**
-
-   - `seen = {}`
-
-2. **First Iteration (index = 0, value = 2):**
-
-   - `complement = 9 - 2 = 7`
-   - `7 not in seen`
-   - Update `seen`: `{2: 0}`
-
-3. **Second Iteration (index = 1, value = 7):**
-
-   - `complement = 9 - 7 = 2`
-   - `2 in seen` (at index 0)
-   - Return `[seen[2], 1] = [0, 1]`
-
-### Output: `[0, 1]`
-
-<br>
-
----
-
-<br>
-
-## Summary
-
-This solution efficiently finds the indices of two numbers that sum to the target using a single pass through the array and a dictionary for constant-time lookups. It leverages the difference between the target and the current number (the complement) to track and quickly locate pairs.
+    
+    - `unordered_map m` is empty.
+2. **Iteration 1 (i = 0):**
+    
+    - `nums[0] = 2`
+    - **Complement Calculation:** `complement = 9 - 2 = 7`
+    - **Lookup:** `7` is not in `m`
+    - **Insertion:** Add `{2: 0}` to `m`.
+3. **Iteration 2 (i = 1):**
+    
+    - `nums[1] = 7`
+    - **Complement Calculation:** `complement = 9 - 7 = 2`
+    - **Lookup:** `2` is found in `m` (stored at index `0`)
+    - **Return:** Immediately returns `[0, 1]`.
