@@ -21,17 +21,17 @@ Get the min/max integer limits by including the `<limits>` header:
 ### short
 
 - **Minimum Size:** 16 bits (2 bytes)
-- **Typical Range (signed):** -32768 to 32767
-- **Typical Range (unsigned):** 0 to 65535
+- **Typical Range (signed):** -32,768 to 32,767
+- **Typical Range (unsigned):** 0 to 65,535
 
 ```cpp
-short short_min = std::numeric_limits<short>::min();  
-short short_max = std::numeric_limits<short>::max();
+short short_min{std::numeric_limits<short>::min()};  
+short short_max{std::numeric_limits<short>::max()};
 ```
 
 ```cpp
-unsigned short ushort_min = 0u;  
-unsigned short ushort_max = std::numeric_limits<unsigned short>::max();
+unsigned short ushort_min{0u};  
+unsigned short ushort_max{std::numeric_limits<unsigned short>::max()};
 ```
 
 <br>
@@ -39,17 +39,17 @@ unsigned short ushort_max = std::numeric_limits<unsigned short>::max();
 ### int
 
 - **Minimum Size:** 16 bits (typically 32 bits on modern systems)
-- **Typical Range (signed):** -2147483648 to 2147483647 (when 32 bits)
-- **Typical Range (unsigned):** 0 to 4294967295
+- **Typical Range (signed):** -2,147,483,648 to 2,147,483,647 (when 32 bits)
+- **Typical Range (unsigned):** 0 to 4,294,967,295
 
 ```cpp
-int int_min = std::numeric_limits<int>::min();  
-int int_max = std::numeric_limits<int>::max();
+int int_min{std::numeric_limits<int>::min()};  
+int int_max{std::numeric_limits<int>::max()};
 ```
 
 ```cpp
-unsigned int uint_min = 0u;  
-unsigned int uint_max = std::numeric_limits<unsigned int>::max();
+unsigned int uint_min{0u};  
+unsigned int uint_max{std::numeric_limits<unsigned int>::max()};
 ```
 
 <br>
@@ -61,13 +61,13 @@ unsigned int uint_max = std::numeric_limits<unsigned int>::max();
 - **Range:** When 32 bits, same as 32-bit int; when 64 bits, much larger.
 
 ```cpp
-long long_min = std::numeric_limits<long>::min();  
-long long_max = std::numeric_limits<long>::max();
+long long_min{std::numeric_limits<long>::min()};  
+long long_max{std::numeric_limits<long>::max()};
 ```
 
 ```cpp
-unsigned long ulong_min = 0u;  
-unsigned long ulong_max = std::numeric_limits<unsigned long>::max();
+unsigned long ulong_min{0u};  
+unsigned long ulong_max{std::numeric_limits<unsigned long>::max()};
 ```
 
 <br>
@@ -75,17 +75,17 @@ unsigned long ulong_max = std::numeric_limits<unsigned long>::max();
 ### long long
 
 - **Minimum Size:** 64 bits (8 bytes)
-- **Typical Range (signed):** -9223372036854775808 to 9223372036854775807
-- **Typical Range (unsigned):** 0 to 18446744073709551615
+- **Typical Range (signed):** -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+- **Typical Range (unsigned):** 0 to 18,446,744,073,709,551,615
 
 ```cpp
-long long long_long_min = std::numeric_limits<long long>::min();  
-long long long_long_max = std::numeric_limits<long long>::max();
+long long long_long_min{std::numeric_limits<long long>::min()};  
+long long long_long_max{std::numeric_limits<long long>::max()};
 ```
 
 ```cpp
-unsigned long long ulong_long_min = 0u;  
-unsigned long long ulong_long_max = std::numeric_limits<unsigned long long>::max();
+unsigned long long ulong_long_min{0u};  
+unsigned long long ulong_long_max{std::numeric_limits<unsigned long long>::max()};
 ```
 
 <br>
@@ -132,13 +132,13 @@ To write portable code where the integer size must be exact, C++ offers fixed-wi
 ### int8_t / uint8_t
 
 ```cpp
-int8_t int8_min = std::numeric_limits<int8_t>::min();  
-int8_t int8_max = std::numeric_limits<int8_t>::max();
+int8_t int8_min{std::numeric_limits<int8_t>::min()};  
+int8_t int8_max{std::numeric_limits<int8_t>::max()};
 ```
 
 ```cpp
-uint8_t uint8_min = 0u;  
-uint8_t uint8_max = std::numeric_limits<uint8_t>::max();
+uint8_t uint8_min{0u};  
+uint8_t uint8_max{std::numeric_limits<uint8_t>::max()};
 ```
 
 <br>
@@ -146,13 +146,13 @@ uint8_t uint8_max = std::numeric_limits<uint8_t>::max();
 ### int16_t / uint16_t
 
 ```cpp
-int16_t int16_min = std::numeric_limits<int16_t>::min();  
-int16_t int16_max = std::numeric_limits<int16_t>::max();
+int16_t int16_min{std::numeric_limits<int16_t>::min()};  
+int16_t int16_max{std::numeric_limits<int16_t>::max()};
 ```
 
 ```cpp
-uint16_t uint16_min = 0u;  
-uint16_t uint16_max = std::numeric_limits<uint16_t>::max();
+uint16_t uint16_min{0u};  
+uint16_t uint16_max{std::numeric_limits<uint16_t>::max()};
 ```
 
 <br>
@@ -160,13 +160,13 @@ uint16_t uint16_max = std::numeric_limits<uint16_t>::max();
 ### int32_t / uint32_t
 
 ```cpp
-int32_t int32_min = std::numeric_limits<int32_t>::min();  
-int32_t int32_max = std::numeric_limits<int32_t>::max();
+int32_t int32_min{std::numeric_limits<int32_t>::min()};  
+int32_t int32_max{std::numeric_limits<int32_t>::max()};
 ```
 
 ```cpp
-uint32_t uint32_min = 0u;  
-uint32_t uint32_max = std::numeric_limits<uint32_t>::max();
+uint32_t uint32_min{0u};  
+uint32_t uint32_max{std::numeric_limits<uint32_t>::max()};
 ```
 
 <br>
@@ -174,13 +174,13 @@ uint32_t uint32_max = std::numeric_limits<uint32_t>::max();
 ### int64_t / uint64_t
 
 ```cpp
-int64_t int64_min = std::numeric_limits<int64_t>::min();  
-int64_t int64_max = std::numeric_limits<int64_t>::max();
+int64_t int64_min{std::numeric_limits<int64_t>::min()};  
+int64_t int64_max{std::numeric_limits<int64_t>::max()};
 ```
 
 ```cpp
-uint64_t uint64_min = 0u;  
-uint64_t uint64_max = std::numeric_limits<uint64_t>::max();
+uint64_t uint64_min{0u};  
+uint64_t uint64_max{std::numeric_limits<uint64_t>::max()};
 ```
 
 <br>
