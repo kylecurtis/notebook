@@ -1,0 +1,3063 @@
+## Model
+
+Claude 3.7 Sonnet (Normal Style)
+
+<br>
+
+---
+
+<br>
+
+## Prompt
+
+> Imagine you are making the most in-depth masterclass on C++ ever made. This masterclass must contain all the information needed to become a complete master at C++, and everything related to it. What would the table of contents for this masterclass look like, where each topic is broken down into as many subtopics as possible?
+
+<br>
+
+---
+
+<br>
+
+## Output
+
+# The Ultimate C++ Masterclass: Comprehensive Table of Contents
+
+## Module 1: C++ Foundations and Language Evolution
+
+1. **History and Evolution of C++**
+
+    - Origins and Relationship with C
+    - C with Classes to C++
+    - The Standardization Process
+    - C++98/03 Key Features
+    - C++11 Revolution: Core Changes
+    - C++14 Refinements
+    - C++17 Incremental Improvements
+    - C++20 Major Advancements
+    - C++23 Latest Developments
+    - WG21 Committee Structure and Proposals
+    - Technical Specifications and Future Directions
+    - Compiler Support Matrices
+
+2. **Development Environment Setup**
+
+    - Compiler Selection and Comparison
+        - GCC (MinGW, Cygwin)
+        - Clang/LLVM
+        - MSVC
+        - Intel C++ Compiler
+        - Compiler-Specific Extensions
+        - Compiler Flags and Optimization Levels
+    - Build Systems
+        - Make and Makefiles
+        - CMake Configuration
+        - Ninja
+        - Bazel
+        - MSBuild
+        - XCode Build System
+    - IDE Selection and Configuration
+        - Visual Studio
+        - CLion
+        - Qt Creator
+        - Visual Studio Code + Extensions
+        - Eclipse CDT
+        - Code::Blocks
+    - Debuggers
+        - GDB
+        - LLDB
+        - Visual Studio Debugger
+        - Debugging Techniques and Commands
+    - Static Analyzers
+        - Clang Static Analyzer
+        - Cppcheck
+        - PVS-Studio
+        - Coverity
+    - Dynamic Analysis Tools
+        - Valgrind Suite (Memcheck, Cachegrind, Callgrind, Helgrind)
+        - AddressSanitizer
+        - ThreadSanitizer
+        - UndefinedBehaviorSanitizer
+        - LeakSanitizer
+        - MemorySanitizer
+
+3. **Basic Program Structure**
+    - Anatomy of a C++ Program
+    - Preprocessing, Compilation, Linking Process
+    - Translation Units
+    - One Definition Rule (ODR)
+    - Include Guards vs #pragma once
+    - Forward Declarations
+    - Declarations vs Definitions
+    - Internal vs External Linkage
+    - Storage Duration Classes (automatic, static, thread_local, dynamic)
+    - Program Entry Points (main function, arguments)
+    - Program Termination (return, exit, abort, terminate)
+    - Command Line Arguments Processing
+    - Environment Variables Access
+    - Executable Structure in Memory
+
+## Module 2: Fundamental Types and Variables
+
+1. **Fundamental Types in Detail**
+
+    - Character Types
+        - char
+        - signed char vs unsigned char
+        - wchar_t
+        - char16_t
+        - char32_t
+        - char8_t (C++20)
+    - Integer Types
+        - short
+        - int
+        - long
+        - long long
+        - Guaranteed Size Types (int8_t, uint32_t, etc.)
+        - Fast and Least Types (int_fast16_t, int_least64_t, etc.)
+        - size_t and ptrdiff_t
+        - intmax_t and uintmax_t
+        - Implementation Limits
+    - Floating Point Types
+        - float
+        - double
+        - long double
+        - IEEE-754 Standard
+        - Floating Point Precision Issues
+        - NaN and Infinity Handling
+        - Denormalized Numbers
+    - Boolean Type
+        - bool
+        - Implicit Conversions to/from bool
+        - std::true_type and std::false_type
+    - void Type
+        - Uses and Limitations
+        - void Pointers
+    - nullptr_t Type
+    - Fixed-Width Integer Types (C++11)
+    - std::byte (C++17)
+
+2. **Variables and Declarations**
+
+    - Variable Declaration Syntax
+    - Definition vs Declaration
+    - Initialization
+        - Default Initialization
+        - Value Initialization
+        - Direct Initialization
+        - Copy Initialization
+        - List Initialization (C++11)
+        - Aggregate Initialization
+        - Reference Initialization
+    - Variable Naming Conventions
+    - auto Type Deduction (C++11)
+        - auto with References
+        - auto with const/volatile
+        - auto Return Types
+        - Trailing Return Types
+    - decltype (C++11)
+        - decltype(auto) (C++14)
+        - decltype Rules and Edge Cases
+    - Type Aliases
+        - typedef
+        - using (C++11)
+    - Implicit Type Conversions
+    - Explicit Type Conversions
+        - C-style Casts
+        - static_cast
+        - dynamic_cast
+        - const_cast
+        - reinterpret_cast
+        - Casting Operators in Classes
+
+3. **Constants and Immutability**
+
+    - const Qualifier
+        - const Variables
+        - const Parameters
+        - const Member Functions
+        - const Return Values
+        - const Overloading
+        - East const vs West const
+    - constexpr (C++11)
+        - constexpr Variables
+        - constexpr Functions
+        - constexpr Constructors
+        - constexpr If (C++17)
+        - constexpr Virtual Functions (C++20)
+    - consteval (C++20)
+    - constinit (C++20)
+    - mutable Keyword
+        - mutable Data Members
+        - mutable Lambda Captures
+    - const vs constexpr vs static const
+    - Integral Constants
+        - Enumerators
+        - static const Members
+        - inline Variables (C++17)
+    - String Literals
+        - Raw String Literals (C++11)
+        - UTF-8/16/32 String Literals
+        - Literal Operator Templates
+    - User-defined Literals (C++11)
+        - Numeric Literals
+        - String Literals
+        - Standard Library Literals
+        - Custom Literal Operators
+
+4. **Operators in Depth**
+
+    - Arithmetic Operators
+        - Binary Operators (+, -, \*, /, %)
+        - Unary Operators (+, -)
+        - Increment/Decrement (++, --)
+        - Overflow/Underflow Behavior
+    - Relational Operators
+        - Comparison (<, >, <=, >=, ==, !=)
+        - Three-way Comparison (<=>) (C++20)
+        - Operator Chaining Issues
+    - Logical Operators
+        - And (&&)
+        - Or (||)
+        - Not (!)
+        - Short-circuit Evaluation
+    - Bitwise Operators
+        - And (&)
+        - Or (|)
+        - Xor (^)
+        - Not (~)
+        - Shift (<<, >>)
+        - Bit Manipulation Techniques
+        - Bit Fields in Structures
+    - Assignment Operators
+        - Simple Assignment (=)
+        - Compound Assignment (+=, -=, etc.)
+        - Copy vs Move Semantics in Assignment
+    - Member Access Operators
+        - Dot (.)
+        - Arrow (->)
+        - Pointer-to-Member (._, ->_)
+    - Address-of Operator (&)
+    - Dereference Operator (\*)
+    - Comma Operator (,)
+    - Conditional Operator (?:)
+    - sizeof Operator
+        - sizeof Objects
+        - sizeof Types
+        - sizeof... (Parameter Pack)
+    - alignof Operator (C++11)
+    - noexcept Operator (C++11)
+    - new and delete Operators
+        - Placement new
+        - Array new/delete
+        - Overloading new/delete
+    - typeid Operator
+    - Operator Precedence and Associativity
+    - Operator Overloading Principles
+
+5. **Type Conversions and Type Safety**
+    - Implicit Conversions
+        - Promotion Rules
+        - Standard Conversions
+        - User-defined Conversions
+    - Narrowing Conversions
+        - Preventing with List Initialization
+    - Explicit Conversions
+        - C-style Casts
+        - Named Cast Operators (static_cast, dynamic_cast, etc.)
+        - User-defined Conversion Operators
+    - Safe Numeric Conversions
+        - std::numeric_limits
+        - Overflow Detection
+        - Safe Conversion Functions
+    - Conversions Between Arithmetic Types
+    - Conversions Between Pointer Types
+    - Conversions Between References
+    - Pointer-to-Member Conversions
+    - Function Pointer Conversions
+    - Type Punning and Aliasing Rules
+    - std::bit_cast (C++20)
+
+## Module 3: Control Flow and Program Structure
+
+1. **Conditional Statements**
+
+    - if Statements
+        - Simple if
+        - if-else
+        - if-else if-else Chains
+        - Nested if Statements
+    - switch Statements
+        - Case Labels and break
+        - Default Case
+        - Fall-through Behavior
+        - Switch on Strings (Implementation Techniques)
+        - Switch on Class Types (Implementation Techniques)
+    - Conditional Operator (?:)
+        - Nested Conditional Operators
+        - Return Value Restrictions
+    - if with Initialization (C++17)
+        - if (init; condition)
+        - Benefits for Scope Control
+    - switch with Initialization (C++17)
+    - Constexpr if (C++17)
+        - Compile-time Branching
+        - Template Specialization Alternative
+    - Short-circuit Evaluation in Conditionals
+    - Branch Prediction Optimization
+    - Branchless Programming Techniques
+
+2. **Loops and Iteration**
+
+    - for Loop
+        - Traditional for Loop
+        - Comma Operator in for Loops
+        - Multiple Counters in for Loops
+        - Omitting Loop Components
+    - while Loop
+        - Pre-test vs Post-test Loops
+        - Infinite Loops
+    - do-while Loop
+    - Range-based for Loop (C++11)
+        - Container Requirements
+        - Custom Range Support
+        - Init-statement in Range-for (C++20)
+    - break Statement
+        - Breaking from Nested Loops
+        - Labeled Breaks (Workarounds)
+    - continue Statement
+    - goto Statement and Labels
+        - Appropriate Uses
+        - Structured Programming Alternative
+    - Infinite Loops with Control Flow
+    - Loop Invariants
+    - Loop Unrolling Techniques
+    - Duff's Device and Loop Optimization
+    - Iterator-based Loops vs Indexing
+    - Parallel Algorithms and Execution Policies (C++17)
+
+3. **Jump Statements and Exception Handling Basics**
+
+    - return Statement
+        - Return Value Optimization (RVO)
+        - Named Return Value Optimization (NRVO)
+        - Return Type Deduction (auto) (C++14)
+    - break Statement
+        - Breaking from Loops
+        - Breaking from switch
+    - continue Statement
+    - goto Statement
+        - Forward and Backward Jumps
+        - Restrictions on goto
+    - Exception Handling Basics
+        - throw Expression
+        - try-catch Blocks
+        - Standard Exception Hierarchy
+        - Exception Propagation
+        - Stack Unwinding
+        - Resource Management During Exceptions
+        - noexcept Specifier
+        - Function-try-blocks
+    - Assertions
+        - static_assert (C++11)
+        - assert Macro
+        - Custom Assertion Mechanisms
+    - Early Returns vs Single Exit Point
+    - Exit and Program Termination
+        - exit Function
+        - atexit Handlers
+        - quick_exit (C++11)
+        - abort Function
+        - terminate Function
+
+4. **Namespaces**
+    - Namespace Definition
+    - Namespace Members
+    - Nested Namespaces
+    - Namespace Aliases
+    - Using Declarations
+        - Using Individual Names
+        - Impact on Overload Resolution
+    - Using Directives
+        - Global Using
+        - Scope-limited Using
+        - Pitfalls and Best Practices
+    - Anonymous Namespaces
+        - Replacement for static Global Variables
+        - Lifetime Guarantees
+    - Inline Namespaces (C++11)
+        - Versioning with Inline Namespaces
+        - ADL with Inline Namespaces
+    - Namespace Extension
+    - Argument-dependent Lookup (ADL/Koenig Lookup)
+        - Rules and Mechanics
+        - Pitfalls and Surprises
+    - Qualified vs Unqualified Lookup
+    - Namespace std and Extensions
+    - Namespace Organization Strategies
+    - Namespace Pollution Avoidance
+
+## Module 4: Functions in Depth
+
+1. **Function Declaration and Definition**
+
+    - Function Syntax Elements
+    - Function Declarations vs Definitions
+    - Return Types
+        - void Functions
+        - Value Return Types
+        - Reference Return Types
+        - Pointer Return Types
+        - auto Return Type (C++14)
+    - Parameter Passing Mechanisms
+        - Pass by Value
+        - Pass by Reference
+        - Pass by Constant Reference
+        - Pass by Pointer
+        - Pass by Rvalue Reference
+    - Parameter Lists
+        - Empty Parameter Lists
+        - void Parameter
+        - Default Arguments
+        - Variadic Functions (C-style)
+        - Function Parameter Pack (C++11)
+    - Function Signatures
+    - Trailing Return Type Syntax (C++11)
+    - Linkage Specifications
+        - extern "C"
+        - Language Linkage and ABI
+    - Inline Functions
+        - inline Keyword
+        - Compiler Inlining Decisions
+        - Link-time Optimization
+    - constexpr Functions (C++11)
+        - Rules and Restrictions
+        - Evolution in C++14, C++17, C++20
+    - noexcept Functions (C++11)
+        - Conditional noexcept
+        - noexcept Operator
+    - [[nodiscard]] Attribute (C++17)
+    - [[deprecated]] Attribute (C++14)
+    - Function Body and Scope Rules
+
+2. **Function Overloading**
+
+    - Overloading Principles
+    - Name Mangling
+    - Overloading Resolution Rules
+        - Exact Match
+        - Promotion
+        - Standard Conversion
+        - User-defined Conversion
+        - Ellipsis Match
+    - Ambiguity in Overload Resolution
+    - Overloading with References
+    - Overloading with const/volatile
+    - Overloading with rvalue References
+    - Overloading on Return Type (Impossible)
+    - Overloading and Type Aliases
+    - Overloading and Default Arguments
+    - Overloading and Function Templates
+    - Address of Overloaded Functions
+    - Overloading in Different Namespaces
+    - Best Practices for Function Overloading
+
+3. **Function Templates**
+
+    - Template Parameter Declaration
+        - Type Parameters
+        - Non-type Parameters
+        - Template Template Parameters
+    - Template Argument Deduction
+        - Deduction from Function Arguments
+        - Deduction Guides (C++17)
+    - Explicit Template Arguments
+    - Default Template Arguments (C++11)
+    - Function Template Overloading
+    - Function Template Specialization
+        - Full Specialization
+        - Partial Specialization (Classes Only)
+    - Template Instantiation
+        - Implicit Instantiation
+        - Explicit Instantiation
+        - Extern Templates (C++11)
+    - Template Constraints (C++20)
+        - Concepts
+        - requires Clauses
+        - requires Expressions
+    - Variadic Templates (C++11)
+        - Parameter Packs
+        - Pack Expansion
+        - Fold Expressions (C++17)
+    - Perfect Forwarding
+        - std::forward
+        - Universal References
+    - SFINAE (Substitution Failure Is Not An Error)
+        - enable_if
+        - void_t (C++17)
+        - Techniques and Applications
+
+4. **Lambda Expressions**
+
+    - Basic Lambda Syntax (C++11)
+    - Capture Clauses
+        - Capture by Value
+        - Capture by Reference
+        - Default Captures
+        - this Capture
+        - Capture with Initialization
+        - Mixed Captures
+    - Parameter Lists in Lambdas
+    - Return Type Deduction
+    - Explicit Return Type
+    - Mutable Lambdas
+    - Generic Lambdas (C++14)
+    - Capture by Move (C++14)
+    - Variadic Lambdas (C++14)
+    - Constexpr Lambdas (C++17)
+    - Lambda in Template Parameters (C++20)
+    - Lambda Capture of Parameter Packs (C++20)
+    - Default Constructible and Assignable Lambdas (C++20)
+    - Stateless Lambda Conversion to Function Pointer
+    - Lambdas vs Function Objects
+    - Lambdas vs Bind Expressions
+    - Lambdas in Algorithms
+    - Recursive Lambdas
+    - Immediately Invoked Lambda Expressions (IILE)
+    - Lambda Capture Lifetime Issues
+
+5. **Advanced Function Features**
+    - Function Objects (Functors)
+        - Function Call Operator
+        - Stateful Functors
+        - Standard Library Function Objects
+        - Transparent Function Objects (C++14)
+    - std::function (C++11)
+        - Type Erasure Concept
+        - Callable Storage
+        - Performance Considerations
+    - Function Pointers
+        - Syntax and Usage
+        - Arrays of Function Pointers
+        - Member Function Pointers
+        - std::invoke (C++17)
+    - std::bind (C++11)
+        - Binding Arguments
+        - Placeholders
+        - Nested Binds
+    - std::mem_fn (C++11)
+    - Function Composition Techniques
+    - Currying and Partial Application
+    - Call Wrappers and Decorators
+    - Higher-order Functions
+    - Callbacks and Observer Patterns
+    - Function Traits and Type Detection
+    - Overloaded Function Object (C++17 with std::variant)
+    - Parameter Forwarding
+    - Perfect Forwarding
+    - Forwarding References
+
+## Module 5: Memory Management and Resource Handling
+
+1. **Pointers in Depth**
+
+    - Pointer Basics and Syntax
+    - Pointer vs Reference
+    - Pointer Arithmetic
+        - Array Indexing
+        - Stride Calculation
+        - Alignment Considerations
+    - Pointer Comparison
+    - Pointer to Pointer (Multiple Indirection)
+    - Pointer to Array vs Array of Pointers
+    - Function Pointers
+        - Syntax Variations
+        - typedef and using for Function Pointers
+        - Calling Through Function Pointers
+    - Pointers to Member Functions
+        - Syntax and Usage
+        - Calling Conventions
+    - Pointers to Member Data
+    - void Pointers
+        - Type Erasure
+        - Casting from void\*
+    - nullptr vs NULL vs 0
+    - const Pointers vs Pointers to const
+    - volatile Pointers
+    - Pointer Safety Guidelines
+    - Pointer Validation Techniques
+    - Debugging Pointer Issues
+
+2. **References**
+
+    - Lvalue References
+        - Reference Variables
+        - Reference Parameters
+        - Reference Return Types
+    - Rvalue References (C++11)
+        - Syntax and Semantics
+        - Move Semantics
+        - Perfect Forwarding
+    - Reference Binding Rules
+        - Lvalue Reference Binding
+        - Const Lvalue Reference Binding
+        - Rvalue Reference Binding
+    - Reference Lifetime Extension
+    - Reference to Reference Collapsing Rules
+    - Forwarding References (Universal References)
+    - References vs Pointers
+        - Tradeoffs and Selection Criteria
+    - Dangling References
+    - std::reference_wrapper (C++11)
+    - References in Range-for Loops
+    - Structured Bindings (C++17)
+    - Lifetime Issues with References
+    - References to Temporary Objects
+
+3. **Dynamic Memory Management**
+
+    - Memory Allocation Functions
+        - malloc/free vs new/delete
+        - new/delete Operators
+        - new[]/delete[] for Arrays
+        - nothrow new
+    - Placement new
+        - Custom Memory Allocation
+        - Constructing in Pre-allocated Memory
+        - In-place Construction
+    - Custom Memory Management
+        - Overloading new/delete
+        - Class-specific new/delete
+        - Global new/delete
+    - Memory Allocation Patterns
+        - POD Allocators
+        - Object Pools
+        - Arena/Region Allocators
+        - Stack Allocators
+        - Buddy System
+    - Memory Alignment
+        - alignas Specifier (C++11)
+        - aligned_alloc (C++17)
+        - Over-aligned Types
+    - Memory Access Patterns
+        - Cache-friendly Access
+        - False Sharing Avoidance
+    - Memory Leaks
+        - Detection Techniques
+        - Prevention Strategies
+        - Tools for Analysis
+    - Memory Corruption
+        - Buffer Overflows
+        - Use-after-free
+        - Double-free
+        - Memory Debugging Tools
+
+4. **Smart Pointers**
+
+    - std::unique_ptr (C++11)
+        - Ownership Semantics
+        - Move Operations
+        - Custom Deleters
+        - Array Support
+        - Making Non-copyable Resources
+    - std::shared_ptr (C++11)
+        - Reference Counting
+        - Thread Safety Guarantees
+        - Control Block Structure
+        - Custom Deleters
+        - Aliasing Constructor
+        - create_shared (C++20)
+        - make_shared Optimization
+    - std::weak_ptr (C++11)
+        - Breaking Cyclic Dependencies
+        - Expired Pointers
+        - Lock Mechanism
+        - weak_from_this (C++17)
+    - std::auto_ptr (Deprecated)
+        - Historical Context
+        - Migration to unique_ptr
+    - std::observer_ptr (Library TS)
+    - Intrusive Pointer Alternatives
+    - Custom Smart Pointers
+        - Implementing Reference Counting
+        - Custom Ownership Models
+    - Smart Pointer Performance Considerations
+    - Smart Pointer Best Practices
+    - Smart Pointers with Incomplete Types
+    - Smart Pointers for Arrays
+    - Using Smart Pointers in APIs
+
+5. **Resource Management Patterns**
+    - RAII (Resource Acquisition Is Initialization)
+        - Core Principles
+        - Exception Safety
+        - Scope Guards
+    - Ownership Models
+        - Exclusive Ownership
+        - Shared Ownership
+        - Weak References
+        - Borrowed References
+    - Copy-and-Swap Idiom
+    - Clone-on-Write Pattern
+    - Handle-Body Idiom (Pimpl)
+    - Proxy Objects
+    - Resource Pools
+    - Object Factories
+    - Lazy Initialization
+    - Custom Allocators
+        - Allocator Concepts
+        - Stateless Allocators
+        - Stateful Allocators
+        - Polymorphic Allocators (C++17)
+        - scoped_allocator_adapter
+    - Resource Cleanup Strategies
+        - Exception-safe Cleanup
+        - Cleanup in Hierarchical Structures
+    - Deterministic Destruction
+
+## Module 6: Object-Oriented Programming
+
+1. **Classes Fundamentals**
+
+    - Class Definition Syntax
+    - Class vs Struct
+    - Data Members
+        - Instance Variables
+        - Static Members
+        - Member Initialization
+        - Member Ordering
+    - Member Functions
+        - Instance Methods
+        - const Member Functions
+        - Static Member Functions
+        - Member Function Overloading
+    - this Pointer
+        - Explicit vs Implicit this
+        - this Type Variations
+    - Access Specifiers
+        - public
+        - protected
+        - private
+        - Access Control Strategies
+    - Friend Declaration
+        - Friend Functions
+        - Friend Classes
+        - Friend Member Functions
+    - Member Types (Nested Types)
+    - Local Classes
+    - Anonymous Classes
+    - Class Forward Declarations
+    - Member Access Control
+    - Size and Layout of Classes
+        - Alignment Issues
+        - Padding Optimization
+        - Empty Base Optimization
+    - Most Vexing Parse Problem
+
+2. **Constructors and Initialization**
+
+    - Default Constructor
+        - Implicit vs Explicit Default Constructor
+        - defaulted Constructor (C++11)
+    - Parameterized Constructors
+    - Copy Constructor
+        - Default Copy Behavior
+        - Defining Custom Copy Constructors
+        - Preventing Copying
+        - Shallow vs Deep Copy
+        - Copy Elision
+    - Move Constructor (C++11)
+        - Move Semantics
+        - noexcept Move Operations
+        - Implementing Efficient Moves
+    - Converting Constructors
+        - explicit Keyword
+        - Conversion Operators
+    - Delegating Constructors (C++11)
+    - Inheriting Constructors (C++11)
+    - In-class Member Initializers (C++11)
+    - Member Initialization List
+        - Initialization Order
+        - Performance Implications
+    - Initialization vs Assignment
+    - Initialization Order Across Translation Units
+    - Constructor Overloading
+    - Perfect Forwarding Constructors
+    - Private Constructors
+    - Factory Methods
+    - Named Constructor Idiom
+
+3. **Destructors**
+
+    - Destructor Definition
+    - Virtual Destructors
+    - When to Make Destructors Virtual
+    - Destructor Invocation Order
+    - Destructors and Exceptions
+        - noexcept Destructors
+        - Exception-neutral Destructors
+    - Resource Cleanup in Destructors
+    - Destructor Chaining in Inheritance
+    - Pure Virtual Destructors
+    - Protected Destructors
+    - Trivial Destructors
+    - defaulted and deleted Destructors (C++11)
+    - Destructor Patterns
+        - RAII in Destructors
+        - Two-Phase Destruction
+    - Destructor Performance Considerations
+    - Debugging Destructor Calls
+    - Destructor Safety Guarantees
+
+4. **Copy Control and Move Semantics**
+
+    - Rule of Three
+        - Copy Constructor
+        - Copy Assignment Operator
+        - Destructor
+    - Rule of Five (C++11)
+        - Move Constructor
+        - Move Assignment Operator
+    - Rule of Zero
+    - Copy Assignment Operator
+        - Self-assignment Protection
+        - Copy-and-Swap Idiom
+        - Return Type and Value
+    - Move Assignment Operator (C++11)
+        - Implementing Efficient Moves
+        - Stolen Resources Cleanup
+    - Preventing Copying and Moving
+        - deleted Functions (C++11)
+        - Private Declarations
+    - Implicit vs Explicit Generation
+        - defaulted Functions (C++11)
+        - Compiler-generated Special Functions
+    - Converting Assignment Operators
+    - Disabling Move Operations
+    - std::move Semantics
+        - Move vs Copy Elision
+        - Return Value Optimization
+    - Move-only Types
+    - Copy and Move Performance Analysis
+
+5. **Operator Overloading**
+
+    - Overloadable Operators
+    - Non-overloadable Operators
+    - Member vs Non-member Operators
+    - Requirements for Various Operators
+    - Arithmetic Operators
+        - Binary Operators (+, -, \*, /, %)
+        - Unary Operators (+, -)
+        - Increment/Decrement (++, --)
+    - Assignment Operators
+        - Basic Assignment (=)
+        - Compound Assignment (+=, -=, etc.)
+    - Comparison Operators
+        - Relational (<, >, <=, >=)
+        - Equality (==, !=)
+        - Three-way Comparison (<=>) (C++20)
+        - Automatic Generation of Comparisons (C++20)
+    - Logical Operators
+        - Logical AND/OR (&&, ||)
+        - Logical NOT (!)
+    - Bitwise Operators
+        - AND, OR, XOR, NOT (&, |, ^, ~)
+        - Shift (<<, >>)
+    - Member Access Operators
+        - Arrow (->)
+        - Arrow-star (->\*)
+    - Subscript Operator ([])
+        - Multidimensional Subscript (C++23)
+    - Function Call Operator (())
+        - Function Objects (Functors)
+        - Callable Objects
+    - Conversion Operators
+        - explicit Conversion Operators (C++11)
+        - safe_bool Idiom vs explicit operator bool
+    - Memory Management Operators
+        - new and delete
+        - new[] and delete[]
+        - Placement new and delete
+    - Stream Operators (<<, >>)
+    - User-defined Literals (C++11)
+    - Operator Overloading Guidelines and Best Practices
+
+6. **Inheritance**
+
+    - Base and Derived Classes
+        - Syntax and Basic Mechanics
+        - Member Access in Inheritance
+    - Public Inheritance
+        - Is-a Relationship
+        - Substitutability
+        - Liskov Substitution Principle
+    - Protected Inheritance
+        - Use Cases and Patterns
+    - Private Inheritance
+        - Implementation Inheritance
+        - vs Composition
+    - Types of Inheritance
+        - Single Inheritance
+        - Multiple Inheritance
+        - Multilevel Inheritance
+        - Hierarchical Inheritance
+        - Hybrid Inheritance
+    - Virtual Inheritance
+        - Diamond Problem
+        - Virtual Base Classes
+        - Constructor Chaining with Virtual Bases
+    - Inherited Constructors (C++11)
+        - using Base::Base
+        - Interaction with Other Constructors
+    - Name Hiding and Overriding
+        - using Declarations in Derived Classes
+        - Override Specifier (C++11)
+        - Final Specifier (C++11)
+    - Base Class Access
+        - Super Class Access
+        - Qualified Name Lookup
+    - Object Slicing
+        - Passing by Value vs Reference
+        - Slicing Prevention
+    - Empty Base Optimization
+    - Inheritance and Member Functions
+        - Overriding vs Overloading
+        - Hiding vs Overriding
+    - Order of Construction and Destruction
+    - Inheritance in Generic Programming
+
+7. **Polymorphism**
+
+    - Virtual Functions
+        - Basic Mechanics
+        - Virtual Table (vtable)
+        - Virtual Function Pointer (vptr)
+        - Cost of Virtual Functions
+    - Pure Virtual Functions
+        - Abstract Classes
+        - Interface Definition
+        - Pure Virtual Destructors
+    - Abstract Classes vs Interfaces
+    - Dynamic Binding
+        - Runtime Type Information (RTTI)
+        - typeid Operator
+        - std::type_info
+    - Multiple Inheritance with Virtual Functions
+    - Virtual Function Overriding Rules
+        - override Specifier (C++11)
+        - Exact Signature Matching
+        - Return Type Covariance
+    - Final Classes and Virtual Functions (C++11)
+        - final Specifier
+        - Preventing Overrides
+    - Virtual Function Default Arguments
+    - Virtual Function Table Layout
+    - Dynamic Casting
+        - dynamic_cast Operator
+        - Cross-casting
+        - Down-casting Safety
+    - Object Lifetime in Polymorphic Contexts
+    - Polymorphic Cloning Patterns
+    - Virtual Constructor Pattern
+    - Non-Virtual Interface Idiom (NVI)
+    - Template Method Pattern
+
+8. **Multiple Inheritance**
+
+    - Basic Multiple Inheritance
+    - Diamond Problem
+        - Virtual Inheritance Solution
+        - Constructor Chaining
+    - Ambiguity Resolution
+        - Qualified Names
+        - Scope Resolution
+    - Multiple Inheritance Design Patterns
+        - Interface Inheritance
+        - Mixin Classes
+        - Decorator Pattern Implementation
+    - Multiple Inheritance Alternatives
+        - Composition over Inheritance
+        - Policy-based Design
+    - Virtual Inheritance Mechanics
+        - Memory Layout
+        - Virtual Base Tables
+        - Performance Implications
+    - Dominance Rule
+    - Multiple Inheritance in Standard Library
+    - Guidelines for Effective Multiple Inheritance
+    - Interface Segregation Principle
+
+9. **Class Design Patterns**
+    - SOLID Principles
+        - Single Responsibility
+        - Open-Closed
+        - Liskov Substitution
+        - Interface Segregation
+        - Dependency Inversion
+    - PIMPL Idiom (Pointer to Implementation)
+        - Compilation Firewall
+        - ABI Stability
+        - Implementation Techniques
+    - Type Erasure
+        - External Polymorphism
+        - std::function Implementation
+    - Curiously Recurring Template Pattern (CRTP)
+        - Static Polymorphism
+        - Mixins via CRTP
+    - Mixins and Traits
+    - Adapter Pattern
+    - Decorator Pattern
+    - Factory Patterns
+        - Simple Factory
+        - Factory Method
+        - Abstract Factory
+    - Builder Pattern
+    - Singleton Pattern
+        - Thread-safe Singleton
+        - Meyers Singleton
+    - Observer Pattern
+    - Visitor Pattern
+    - Composite Pattern
+    - Strategy Pattern
+    - Command Pattern
+    - State Pattern
+    - Template Method Pattern
+    - Proxy Pattern
+    - Bridge Pattern
+    - Chain of Responsibility
+    - Null Object Pattern
+    - Policy-based Design
+
+## Module 7: Advanced Templates and Generic Programming
+
+1. **Template Fundamentals**
+
+    - Template Syntax Deep Dive
+        - Template Declaration
+        - Template Definition
+        - Template Instantiation
+    - Function Templates
+        - Function Template Declaration
+        - Function Template Definition
+        - Function Template Overloading
+    - Class Templates
+        - Class Template Declaration
+        - Class Template Definition
+        - Member Function Definition
+    - Variable Templates (C++14)
+        - Syntax and Semantics
+        - Use Cases
+        - Interaction with constexpr
+    - Template Parameters
+        - Type Parameters
+        - Non-type Parameters
+            - Integral Types
+            - Pointer Types
+            - Reference Types
+            - nullptr_t
+            - enum Types
+            - Floating Point Types (C++20)
+            - Literal Class Types (C++20)
+        - Template Template Parameters
+    - Template Arguments
+        - Explicit Arguments
+        - Deduced Arguments
+        - Default Arguments
+    - Template Specialization
+        - Full Specialization
+        - Partial Specialization
+            - Class Partial Specialization
+            - Variable Partial Specialization
+        - Function Template Specialization Limitations
+    - Template Instantiation
+        - Implicit Instantiation
+        - Explicit Instantiation
+        - Extern Templates (C++11)
+    - Friend Templates
+    - Template Aliases (C++11)
+    - Template Template Arguments
+    - Dependent Names
+        - Dependent Type Names
+        - Dependent Templates
+        - typename and template Keywords
+
+2. **Advanced Template Techniques**
+
+    - Template Argument Deduction
+        - Function Template Argument Deduction
+        - Class Template Argument Deduction (C++17)
+        - Deduction Guides (C++17)
+        - Auto Parameter (C++20)
+    - Forwarding References (Universal References)
+        - Reference Collapsing Rules
+        - Perfect Forwarding with std::forward
+    - SFINAE (Substitution Failure Is Not An Error)
+        - enable_if
+        - void_t (C++17)
+        - Detection Idiom
+        - Expression SFINAE
+        - Tag Dispatching
+    - Constraints and Concepts (C++20)
+        - Concept Definition
+        - requires Clauses
+        - requires Expressions
+        - Conjunction and Disjunction of Concepts
+        - Concept Subsumption
+        - shorthand function templates
+        - Template Overloading with Concepts
+    - Compile-time if (C++17)
+        - if constexpr
+        - Interaction with SFINAE
+        - Implementation of Dispatch
+    - Variadic Templates (C++11)
+        - Parameter Packs
+        - Pack Expansion
+        - Recursive Variadic Templates
+        - Fold Expressions (C++17)
+            - Unary Folds
+            - Binary Folds
+            - Fold Operators
+    - Type Traits
+        - Standard Type Traits
+        - Writing Custom Type Traits
+        - Transformation Traits
+        - Query Traits
+        - Type Modifications
+    - Template Meta-Programming
+        - Compile-time Computations
+        - Type Lists
+        - Meta-functions
+        - Recursive Template Instantiation
+        - Compile-time Control Structures
+    - Policy-based Design
+        - Policy Classes
+        - Host Classes
+        - Policy Composition
+        - Customization Points
+
+3. **Template Libraries and Patterns**
+
+    - Traits Classes
+        - Iterator Traits
+        - Allocator Traits
+        - Char Traits
+        - Container Traits
+        - Custom Traits Classes
+    - Tag Dispatching
+        - Tag Types
+        - Tag-based Overloading
+        - Tag Hierarchies
+    - Expression Templates
+        - Lazy Evaluation
+        - Operator Fusion
+        - Matrix and Vector Libraries
+    - Template Metaprogramming Libraries
+        - Boost.MP11
+        - Boost.Hana
+        - Brigand
+        - Meta
+    - Static Polymorphism
+        - CRTP (Curiously Recurring Template Pattern)
+        - Static Interfaces
+        - Mixins via CRTP
+    - Typelists
+        - Typelist Operations
+        - Compile-time Algorithms on Typelists
+    - Metafunctions
+        - Higher-Order Metafunctions
+        - Metafunction Composition
+    - Heterogeneous Containers
+        - std::tuple
+        - Tuple Algorithms
+        - Variant-based Containers
+    - Type Erasure Patterns
+        - Type-Erased Function Wrappers
+        - Type-Erased Containers
+    - Customization Point Objects (C++20)
+    - Concepts-based Design (C++20)
+    - Mixins and Composable Class Design
+
+4. **Modern Template Metaprogramming**
+    - Constexpr Functions (Evolution C++11 to C++20)
+        - constexpr vs consteval
+        - constinit (C++20)
+        - Recursive constexpr
+        - constexpr Containers
+    - Compile-time String Manipulation
+        - String Literals as Template Parameters (C++20)
+        - Constexpr String Operations
+    - Reflection Techniques
+        - Current Reflection Limitations
+        - Static Reflection Workarounds
+        - Boost.PFR
+        - Future C++ Reflection (Reflection TS)
+    - Advanced SFINAE Techniques
+        - decltype(auto) in SFINAE
+        - SFINAE-friendly Design
+    - Immediate Functions (C++20)
+        - consteval
+        - Immediate vs Non-immediate Contexts
+    - Meta State Machines
+        - State Transition at Compile Time
+        - Compile-time Parsers
+    - Placeholder Types
+        - auto Parameters (C++20)
+        - Abbreviated Function Templates (C++20)
+    - Higher-Kinded Types Emulation
+    - Static Duck Typing
+    - Expression Evaluation Control
+        - Lazy Evaluation
+        - Short-circuit Template Instantiation
+    - Multi-stage Programming
+    - Template Debugging Techniques
+        - Error Message Interpretation
+        - Debugging Aids
+        - Build Tracing
+
+## Module 8: The Standard Template Library (STL)
+
+1. **STL Containers in Depth**
+
+    - Sequential Containers
+        - std::vector
+            - Memory Layout
+            - Growth Strategies
+            - Invalidation Rules
+            - Small Vector Optimization Techniques
+            - Vector of Bool Specialization
+        - std::array (C++11)
+            - Fixed-size Array
+            - Aggregate Initialization
+            - Zero Overhead Abstraction
+        - std::deque
+            - Block-based Structure
+            - Performance Characteristics
+            - Implementation Details
+        - std::list
+            - Doubly-linked List
+            - Node-based Structure
+            - Splice Operations
+        - std::forward_list (C++11)
+            - Singly-linked List
+            - Memory Efficiency
+            - Cache Performance
+    - Associative Containers
+        - std::set
+            - Red-black Tree Implementation
+            - Uniqueness Constraint
+            - Custom Comparators
+        - std::map
+            - Key-value Storage
+            - Element Access
+            - Insertion Patterns
+        - std::multiset
+            - Duplicate Key Handling
+        - std::multimap
+            - One-to-many Relationships
+    - Unordered Containers (C++11)
+        - std::unordered_set
+            - Hash Table Implementation
+            - Hash Functions
+            - Bucket Management
+        - std::unordered_map
+            - Performance Characteristics
+            - Load Factor and Rehashing
+        - std::unordered_multiset
+        - std::unordered_multimap
+        - Custom Hash Functions
+        - Custom Key Equality
+    - Container Adaptors
+        - std::stack
+            - LIFO Interface
+            - Underlying Container Options
+        - std::queue
+            - FIFO Interface
+        - std::priority_queue
+            - Heap Implementation
+            - Custom Comparators
+    - Special Purpose Containers
+        - std::span (C++20)
+            - Non-owning View
+            - Fixed and Dynamic Extent
+        - std::string_view (C++17)
+            - Non-owning String Reference
+            - Performance Benefits
+        - std::bitset
+            - Fixed-size Bit Array
+            - Bit Manipulation
+    - C-Style Arrays vs STL Containers
+
+2. **STL Iterators**
+
+    - Iterator Categories
+        - Input Iterators
+        - Output Iterators
+        - Forward Iterators
+        - Bidirectional Iterators
+        - Random Access Iterators
+        - Contiguous Iterators (C++20)
+    - Iterator Operations
+        - Advancement (++, --)
+        - Dereferencing (\*)
+        - Element Access (->)
+        - Indexing ([])
+        - Distance Calculation
+    - Iterator Adaptors
+        - Reverse Iterators
+        - Move Iterators (C++11)
+        - Insert Iterators
+            - Back Inserters
+            - Front Inserters
+            - General Inserters
+        - Stream Iterators
+            - Input Stream Iterators
+            - Output Stream Iterators
+    - Iterator Traits
+        - std::iterator_traits
+        - Iterator Type Definitions
+        - Iterator Category Tags
+    - Iterator Safety
+        - Invalidation Rules
+        - Debug Iterators
+    - Range Access Functions
+        - begin/end
+        - cbegin/cend
+        - rbegin/rend
+        - crbegin/crend
+    - Sentinel Iterators (C++20)
+    - Custom Iterator Implementation
+        - Requirements by Category
+        - Common Iterator Pitfalls
+    - Iterator Utilities
+        - std::distance
+        - std::advance
+        - std::next/prev
+        - std::iter_swap
+    - Ranges and Views (C++20)
+        - Range Concepts
+        - Range Adaptors
+        - Range Factories
+        - Lazy Evaluation with Views
+
+3. **STL Algorithms**
+
+    - Non-modifying Sequence Operations
+        - all_of, any_of, none_of (C++11)
+        - for_each, for_each_n (C++17)
+        - count, count_if
+        - find, find_if, find_if_not
+        - find_first_of, adjacent_find
+        - search, search_n
+        - find_end
+    - Modifying Sequence Operations
+        - copy, copy_if, copy_n, copy_backward
+        - move, move_backward (C++11)
+        - fill, fill_n, generate, generate_n
+        - transform
+        - replace, replace_if, replace_copy
+        - swap, swap_ranges, iter_swap
+        - reverse, reverse_copy
+        - rotate, rotate_copy
+        - random_shuffle, shuffle (C++11)
+        - sample (C++17)
+        - unique, unique_copy
+        - remove, remove_if, remove_copy
+    - Partitioning Operations
+        - partition, stable_partition
+        - partition_copy (C++11)
+        - partition_point (C++11)
+        - is_partitioned (C++11)
+    - Sorting Operations
+        - sort, stable_sort
+        - partial_sort, partial_sort_copy
+        - nth_element
+        - is_sorted, is_sorted_until (C++11)
+        - Sorting Complexity and Implementation Details
+    - Binary Search Operations
+        - lower_bound, upper_bound
+        - equal_range
+        - binary_search
+    - Set Operations (on Sorted Ranges)
+        - merge, inplace_merge
+        - includes
+        - set_union, set_intersection
+        - set_difference, set_symmetric_difference
+    - Heap Operations
+        - make_heap, push_heap, pop_heap
+        - sort_heap
+        - is_heap, is_heap_until (C++11)
+        - Implementation Details of Heap Algorithms
+    - Minimum/Maximum Operations
+        - min, max, minmax (C++11)
+        - min_element, max_element, minmax_element
+        - clamp (C++17)
+    - Comparison Operations
+        - equal, lexicographical_compare
+        - mismatch
+        - is_permutation (C++11)
+        - lexicographical_compare_three_way (C++20)
+    - Numeric Operations
+        - iota
+        - accumulate
+        - inner_product
+        - adjacent_difference
+        - partial_sum
+        - reduce, transform_reduce (C++17)
+        - exclusive_scan, inclusive_scan (C++17)
+        - transform_exclusive_scan, transform_inclusive_scan (C++17)
+    - Execution Policies (C++17)
+        - std::execution::seq
+        - std::execution::par
+        - std::execution::par_unseq
+        - Algorithm Parallelization
+    - C++20 Algorithm Additions
+        - shift_left, shift_right
+        - starts_with, ends_with
+        - contains
+    - Performance Considerations
+        - Algorithm Complexity
+        - Memory Access Patterns
+        - Iterator Requirements Impact
+
+4. **Advanced STL Usage**
+
+    - STL Allocators
+        - Standard Allocator Interface
+        - Allocator Traits
+        - Stateful vs Stateless Allocators
+        - Scoped Allocators
+        - Polymorphic Allocators (C++17)
+        - Memory Resources (C++17)
+    - Function Objects and Callables
+        - Predefined Function Objects
+        - Arithmetic Operations
+        - Comparison Operations
+        - Logical Operations
+        - Bitwise Operations
+        - Reference Wrappers
+        - Binders (Deprecated)
+        - mem_fn (C++11)
+        - std::invoke (C++17)
+    - Custom Comparators
+        - Strict Weak Ordering
+        - Comparator Requirements
+        - Transparent Comparators (C++14)
+        - Heterogeneous Lookup (C++14)
+        - Three-way Comparisons (C++20)
+    - Composite Containers
+        - Container Adapters
+        - Nested Containers
+        - Multi-index Containers
+    - Container Optimization Techniques
+        - Reserve and Capacity
+        - Emplace Operations (C++11)
+        - Shrink to Fit
+        - Small Object Optimization
+        - Short String Optimization
+    - Range Manipulation Patterns
+        - Erase-Remove Idiom
+        - Transform-Copy Patterns
+        - In-place Transformation
+    - Custom Sequence Generation
+        - Generator Functions
+        - iota-based Sequences
+        - Fibonacci and Other Sequences
+    - Container Selection Guidelines
+        - Performance Tradeoffs
+        - Memory Overhead
+        - Iterator Stability
+        - Access Pattern Matching
+
+5. **Strings and Text Processing**
+    - std::string
+        - Internal Representation
+        - SSO (Small String Optimization)
+        - Capacity and Growth
+        - Performance Characteristics
+    - String Operations
+        - Concatenation
+        - Substring Extraction
+        - Modification (insert, replace, erase)
+        - Search Functions
+        - Comparison
+    - String View (C++17)
+        - Non-owning String Reference
+        - Performance Benefits
+        - Usage Guidelines
+        - Lifetime Issues
+    - Character and String Literals
+        - Character Types
+        - String Literal Types
+        - Raw String Literals (C++11)
+        - Unicode Literals (C++11)
+    - String Conversion
+        - Numeric Conversions
+        - to_string (C++11)
+        - stoi, stol, stof, etc. (C++11)
+        - Localized Conversions
+    - String Algorithms
+        - String Parsing
+        - String Splitting
+        - String Joining
+        - String Trimming
+        - Case Conversion
+        - Pattern Matching
+    - Character Classification
+        - Character Traits
+        - std::isalpha, std::isdigit, etc.
+        - Custom Character Traits
+    - String Formatting (C++20)
+        - std::format
+        - Format Specifiers
+        - Custom Formatters
+    - Localization
+        - Locale-aware String Operations
+        - Collation
+        - std::codecvt (Deprecated)
+    - Regular Expressions (C++11)
+        - Regex Syntax Options
+        - Regex Match Types
+        - Capture Groups
+        - Regex Iterators
+        - Regex Token Iterators
+        - Regex Replace
+        - Performance Considerations
+
+## Module 9: Modern C++ Features
+
+1. **Move Semantics and Value Categories**
+
+    - Value Categories
+        - lvalue
+        - prvalue
+        - xvalue
+        - glvalue
+        - rvalue
+        - Historical Context and Evolution
+    - Move Semantics Fundamentals
+        - Move vs Copy
+        - Resource Transfer
+        - Performance Benefits
+    - rvalue References
+        - Type Deduction Rules
+        - Reference Collapsing
+        - Perfect Forwarding
+    - Move Constructor
+        - Implementation Guidelines
+        - noexcept Specification
+        - Exception Safety
+    - Move Assignment
+        - Self-assignment Handling
+        - Resource Management
+    - std::move Implementation
+        - Cast to rvalue Reference
+        - When to Use std::move
+        - Moving const Objects
+    - std::forward Implementation
+        - Perfect Forwarding
+        - Template Argument Deduction
+        - Universal References
+    - Copy/Move Elision
+        - Return Value Optimization (RVO)
+        - Named Return Value Optimization (NRVO)
+        - Guaranteed Copy Elision (C++17)
+        - Temporary Materialization
+    - Move-only Types
+        - Design Considerations
+        - Implementation Patterns
+    - Special Member Function Generation
+        - Rule of Zero
+        - Rule of Three
+        - Rule of Five
+    - Move Semantics for Containers
+        - Moving Contained Elements
+        - Capacity Reuse
+    - Move Semantics Idioms
+        - Sink Functions
+        - Move-and-return Pattern
+        - Temporary Materialization
+    - Move Semantics Pitfalls
+        - Moving from const
+        - Moving Atomic Types
+        - Move in Hot Paths
+
+2. **Memory Model and Concurrency**
+
+    - C++ Memory Model
+        - Object Representation
+        - Memory Locations
+        - Memory Order
+        - Atomicity
+        - Atomic Types
+    - Thread Support Library (C++11)
+        - std::thread
+            - Creation and Management
+            - Joinable State
+            - Thread IDs
+            - Native Handles
+        - Thread Construction
+        - Thread Lifetime
+        - Thread Synchronization
+    - Mutual Exclusion
+        - Mutex Types
+            - std::mutex
+            - std::recursive_mutex
+            - std::timed_mutex
+            - std::recursive_timed_mutex
+            - std::shared_mutex (C++17)
+        - Lock Types
+            - std::lock_guard
+            - std::unique_lock
+            - std::shared_lock (C++14)
+            - std::scoped_lock (C++17)
+        - Lock Management
+            - std::try_lock
+            - std::lock
+            - Deadlock Avoidance
+    - Condition Variables
+        - std::condition_variable
+        - std::condition_variable_any
+        - Spurious Wakeups
+        - Predicate Usage
+        - Notification Strategies
+    - Atomic Operations
+        - std::atomic Template
+        - Atomic Specializations
+        - Memory Order Constraints
+            - relaxed
+            - consume (deprecated)
+            - acquire
+            - release
+            - acq_rel
+            - seq_cst
+        - Atomic Flag
+        - Lock-free Programming
+    - Futures and Promises (C++11)
+        - std::future
+        - std::shared_future
+        - std::promise
+        - Passing Values Between Threads
+        - Exception Propagation
+    - Async Operations (C++11)
+        - std::async
+        - Launch Policies
+        - Future Status
+    - Thread Synchronization Patterns
+        - Barriers (C++20)
+        - Latches (C++20)
+        - Semaphores (C++20)
+        - Spinlocks
+        - Read-Write Locks
+    - Thread-Local Storage
+        - thread_local Keyword
+        - Thread-Local Variables
+    - Concurrency Patterns
+        - Producer-Consumer
+        - Thread Pool
+        - Active Object
+        - Monitor
+        - Read-Copy-Update (RCU)
+        - Double-Checked Locking
+    - Coroutines (C++20)
+        - co_await, co_yield, co_return
+        - Coroutine Promise
+        - Coroutine Handle
+        - Awaitable Types
+        - Lazy Evaluation
+        - Asynchronous Programming
+        - Generators
+        - Stackless Coroutines
+
+3. **Compile-time Programming**
+
+    - Constants
+        - constexpr Evolution
+        - consteval (C++20)
+        - constinit (C++20)
+        - constexpr vs const
+    - Constant Expressions
+        - Evaluation at Compile-time
+        - constexpr Functions
+        - constexpr Constructors
+        - constexpr Containers
+    - Compile-time Function Execution
+        - Algorithmic Complexity
+        - Recursion Depth Limits
+        - Compile-time vs Runtime Tradeoffs
+    - Type Traits
+        - Type Properties
+        - Type Modifications
+        - Type Relationships
+        - Custom Type Traits
+    - static_assert
+        - Compile-time Assertions
+        - Type Constraints
+        - Constant Expression Validation
+    - Template Metaprogramming
+        - Compile-time Computations
+        - Compile-time Branching
+        - Compile-time Loops
+    - if constexpr (C++17)
+        - Compile-time Conditional
+        - Dead Branch Elimination
+    - constexpr if (C++17)
+        - SFINAE Alternative
+        - Template Instantiation Control
+    - Folding Expressions (C++17)
+        - Unary Folds
+        - Binary Folds
+        - Fold Operators
+    - Non-type Template Parameters
+        - Evolution and Expansion
+        - String Literals as Template Parameters (C++20)
+        - Floating-point Parameters (C++20)
+    - Compile-time Polymorphism
+        - Static Polymorphism
+        - CRTP (Curiously Recurring Template Pattern)
+        - Policy-based Design
+    - Concepts (C++20)
+        - Constraint Satisfaction
+        - Concept Definition
+        - Requirement Expressions
+    - Immediate Functions (C++20)
+        - consteval
+        - Immediate vs Non-immediate Contexts
+    - Reflexpr (Future TS)
+        - Reflection Mechanisms
+        - Metaclasses
+
+4. **C++17 and C++20 Core Features**
+    - C++17 Core Features
+        - Structured Bindings
+            - Tuple-like Types
+            - Array Bindings
+            - Structure Bindings
+            - Custom Bindings
+        - if/switch with Initialization
+        - Inline Variables
+        - Fold Expressions
+        - Class Template Argument Deduction
+            - Deduction Guides
+            - Implicit Deduction
+        - auto Non-type Template Parameters
+        - constexpr if
+        - Guaranteed Copy Elision
+        - Lambda Capture of \*this
+        - Aggregate Initialization Extensions
+        - std::byte
+        - Attributes
+            - [[fallthrough]]
+            - [[nodiscard]]
+            - [[maybe_unused]]
+    - C++20 Core Features
+        - Concepts
+            - Concept Definition
+            - Concept Usage
+            - Requires Expressions
+            - Constraint Satisfaction
+        - Coroutines
+            - Coroutine Traits
+            - Coroutine State
+            - Promise Type
+            - Generators
+            - Asynchronous Programming
+        - Ranges
+            - Range Concepts
+            - Range Adaptors
+            - Range Factory Functions
+            - Views Composition
+        - Modules
+            - Module Units
+            - Exports and Imports
+            - Global Module Fragment
+            - Private Module Fragment
+        - Three-way Comparison
+            - Spaceship Operator (<=>)
+            - Comparison Category Types
+            - Rewriting Rules
+        - Feature Test Macros
+        - consteval and constinit
+        - Designated Initializers
+        - Non-type Template Parameters
+            - Class Types
+            - Floating-point Types
+            - String Literals
+        - Immediate Functions
+        - Lambda Enhancements
+            - Template Parameters
+            - Default Constructible
+            - Pack Expansion in Capture
+        - Extended aggregate Initialization
+        - using enum
+        - New Attributes
+            - [[likely]] and [[unlikely]]
+            - [[no_unique_address]]
+
+## Module 10: Advanced C++ Applications
+
+1. **File I/O and Streams**
+
+    - Stream Classes
+        - std::ios_base
+        - std::basic_ios
+        - std::basic_istream
+        - std::basic_ostream
+        - std::basic_iostream
+        - std::basic_stringstream
+        - std::basic_fstream
+    - Stream States and Error Handling
+        - good(), eof(), fail(), bad()
+        - Stream State Management
+        - Exception Handling in Streams
+    - Stream Formatting
+        - Format Flags
+        - Field Width and Fill
+        - Precision Control
+        - Format Manipulators
+        - Custom Manipulators
+    - File Operations
+        - Opening and Closing Files
+        - File Modes (read, write, append, binary)
+        - Random Access
+        - File Positioning
+        - File Buffer Management
+    - Binary I/O
+        - Reading/Writing Binary Data
+        - Type Safety Issues
+        - Endianness Handling
+        - Memory Mapping (Implementation)
+    - Stream Buffers
+        - std::streambuf
+        - Custom Stream Buffers
+        - Buffer Management
+        - Buffer Synchronization
+    - String Streams
+        - In-memory I/O
+        - String Extraction/Insertion
+        - Performance Characteristics
+    - File System Library (C++17)
+        - Paths
+        - Directory Operations
+        - File Operations
+        - File Status
+        - Permissions
+        - Symbolic Links
+    - Formatted I/O (C++20)
+        - std::format
+        - Format Specifications
+        - Custom Format Specializations
+        - Format Errors
+    - Low-level File I/O
+        - C-style I/O (fopen, fread, etc.)
+        - POSIX I/O (open, read, write)
+        - Windows I/O (CreateFile, ReadFile, WriteFile)
+        - Memory-mapped Files
+    - I/O Multiplexing
+        - select/poll/epoll
+        - Asynchronous I/O Patterns
+
+2. **Networking and Interprocess Communication**
+
+    - Socket Programming
+        - Berkeley Sockets API
+        - Winsock API
+        - Socket Types (TCP, UDP, Unix, RAW)
+        - Socket Options
+        - Non-blocking Sockets
+    - TCP Programming
+        - Connection Establishment
+        - Data Transmission
+        - Connection Termination
+        - Error Handling
+    - UDP Programming
+        - Datagram Transmission
+        - Multicast and Broadcast
+    - Network Address Handling
+        - IPv4 and IPv6 Addressing
+        - Name Resolution
+        - Address Conversion
+    - Asynchronous Networking
+        - Select/Poll/Epoll Models
+        - Completion/Continuation Models
+        - Proactor vs Reactor Patterns
+    - C++ Networking TS
+        - net::ip::tcp
+        - net::ip::udp
+        - Basic Socket Operations
+        - Asynchronous Operations
+    - Higher-level Protocols
+        - HTTP Client/Server
+        - WebSocket
+        - TLS/SSL Integration
+    - Interprocess Communication
+        - Pipes
+        - Named Pipes/FIFOs
+        - Message Queues
+        - Shared Memory
+        - Memory-mapped Files
+    - Remote Procedure Calls
+        - RPC Frameworks
+        - Serialization
+        - Interface Definition Languages
+    - Service Discovery
+        - DNS-SD
+        - mDNS
+        - SSDP/UPnP
+    - Network Programming Patterns
+        - Client-Server Model
+        - Peer-to-Peer Model
+        - Pub-Sub Model
+        - Middleware Patterns
+
+3. **Advanced Memory Management**
+
+    - Memory Layout
+        - Process Memory Segments
+        - Virtual Memory
+        - Physical Memory
+        - Memory Mapping
+    - Memory Alignment
+        - Alignment Requirements
+        - Manual Alignment Control
+        - Over-aligned Types
+        - alignas/alignof
+    - Custom Allocators
+        - Allocator Requirements
+        - Stateful Allocators
+        - Stateless Allocators
+        - Scoped Allocators
+        - Polymorphic Allocators (C++17)
+    - Memory Pools
+        - Fixed-size Blocks
+        - Variable-size Blocks
+        - Segregated Storage
+        - Pool Allocation Strategies
+    - Arena Allocators
+        - Region-based Memory Management
+        - Memory Reuse Strategies
+        - Hierarchical Arenas
+    - Object Pools
+        - Pool-based Construction
+        - Recycling Objects
+        - Thread Safety in Object Pools
+    - Memory Debugging Techniques
+        - Guard Pages
+        - Canary Values
+        - Allocation Tracking
+        - Memory Tagging
+    - Memory Profiling
+        - Allocation/Deallocation Patterns
+        - Memory Fragmentation Analysis
+        - Cache Utilization
+    - Custom new/delete Operators
+        - Global Overrides
+        - Class-specific Overrides
+        - Placement new Variations
+    - Memory-mapped Files
+        - File Mapping
+        - Shared Memory Communication
+        - Persistent Memory
+    - Memory Order and Atomics
+        - Memory Barriers
+        - Acquire-Release Semantics
+        - Sequential Consistency
+    - Garbage Collection Techniques
+        - Reference Counting
+        - Mark-and-Sweep
+        - Copying Collection
+        - Incremental Collection
+    - C++ Memory Model Details
+        - Object Lifetime
+        - Storage Duration
+        - Memory Access Synchronization
+
+4. **Optimization Techniques**
+
+    - Compiler Optimizations
+        - Function Inlining
+        - Loop Unrolling
+        - Dead Code Elimination
+        - Constant Propagation/Folding
+        - Auto-vectorization
+    - Performance Analysis
+        - Benchmarking Techniques
+        - Profiling Tools
+        - Hotspot Identification
+        - Performance Counters
+    - Data Structure Optimization
+        - Cache-friendly Data Structures
+        - SoA vs AoS Layout
+        - Contiguous Memory Layout
+        - Memory Access Patterns
+    - Algorithmic Optimization
+        - Time Complexity Analysis
+        - Space Complexity Tradeoffs
+        - Algorithm Selection Strategies
+        - Branch Prediction Optimization
+    - Cache Optimization
+        - Cache Hierarchies
+        - Cache Line Utilization
+        - Prefetching
+        - False Sharing Avoidance
+    - Memory Access Patterns
+        - Sequential Access
+        - Strided Access
+        - Random Access
+        - Access Coalescing
+    - SIMD Programming
+        - Intrinsics Usage
+        - Auto-vectorization Hints
+        - Data Alignment for SIMD
+        - SIMD Algorithm Adaptation
+    - Multithreaded Optimization
+        - Thread Scaling
+        - Load Balancing
+        - Thread Affinity
+        - Work Stealing
+    - Compile-time Computation
+        - constexpr Utilization
+        - Template Metaprogramming
+        - Code Generation Techniques
+    - Code Size Optimization
+        - Template Bloat Reduction
+        - Function Merging
+        - Code Factoring
+    - Link-time Optimization (LTO)
+        - Interprocedural Optimization
+        - Whole Program Optimization
+    - Profile-guided Optimization (PGO)
+        - Training Runs
+        - Feedback-directed Optimization
+    - Low-level Optimization
+        - Assembly Integration
+        - Compiler Intrinsics
+        - Inline Assembly
+        - Calling Convention Optimization
+    - Domain-specific Optimizations
+        - Numeric Computation
+        - String Processing
+        - Graphics Processing
+        - Network Processing
+
+5. **Testing, Debugging, and Quality Assurance**
+    - Unit Testing Frameworks
+        - Google Test
+        - Catch2
+        - Doctest
+        - Boost.Test
+        - Test Organization
+        - Test Setup/Teardown
+    - Test-Driven Development
+        - TDD Workflow
+        - Test First Approach
+        - Refactoring Phase
+    - Mock Objects
+        - Google Mock
+        - FakeIt
+        - Mocking Techniques
+        - Dependency Injection
+    - Property-based Testing
+        - QuickCheck-style Tests
+        - Property Definition
+        - Test Case Generation
+    - Fuzzing
+        - LibFuzzer
+        - AFL
+        - Fuzzing Harnesses
+        - Corpus Development
+    - Static Analysis
+        - Clang Static Analyzer
+        - Coverity
+        - PVS-Studio
+        - Cppcheck
+        - Rule Sets and Configuration
+    - Dynamic Analysis
+        - Valgrind Suite
+            - Memcheck
+            - Cachegrind
+            - Callgrind
+            - Helgrind
+            - DRD
+        - AddressSanitizer
+        - ThreadSanitizer
+        - UndefinedBehaviorSanitizer
+        - MemorySanitizer
+    - Code Coverage
+        - Line Coverage
+        - Branch Coverage
+        - Function Coverage
+        - MCDC Coverage
+        - Coverage Tools
+    - Debugging Techniques
+        - Debugger Usage
+            - Breakpoints
+            - Watchpoints
+            - Call Stack Analysis
+            - Memory Inspection
+        - Post-mortem Debugging
+6. **Testing, Debugging, and Quality Assurance** (Continued)
+
+    - Debugging Techniques (Continued)
+        - Advanced Debugging
+            - Memory Corruption Detection
+            - Race Condition Analysis
+            - Deadlock Detection
+            - Memory Leak Tracking
+        - Logging Frameworks
+            - Log Levels
+            - Log Formatting
+            - Log Rotation
+            - Structured Logging
+        - Instrumentation
+            - Profiling Instrumentation
+            - Debug Instrumentation
+            - Performance Counters
+    - Continuous Integration
+        - CI Pipelines
+        - Build Automation
+        - Test Automation
+        - Static Analysis Integration
+        - CI Tools for C++
+    - Code Reviews
+        - Review Processes
+        - Automated Review Tools
+        - Review Checklists
+        - Code Quality Metrics
+    - Documentation
+        - API Documentation
+        - Doxygen
+        - Sphinx
+        - Documentation Generation
+        - Documentation Testing
+    - Defensive Programming
+        - Invariant Checking
+        - Pre/Post Conditions
+        - Error Handling Patterns
+        - Exception Safety Levels
+        - Robust Programming Techniques
+    - Security Testing
+        - Vulnerability Scanning
+        - Penetration Testing
+        - Security Code Reviews
+        - Common Vulnerability Patterns
+
+7. **Build Systems and Project Management**
+    - Compilation Process
+        - Preprocessing
+        - Compilation
+        - Assembly
+        - Linking
+        - Load-time Relocation
+    - Makefiles
+        - Rule Syntax
+        - Dependency Tracking
+        - Automatic Variables
+        - Pattern Rules
+        - Phony Targets
+        - Recursive Make
+    - CMake
+        - CMakeLists.txt Structure
+        - Targets and Properties
+        - Find Modules
+        - Generator Expressions
+        - Custom Commands
+        - Package Creation
+        - Toolchain Files
+    - Other Build Systems
+        - Ninja
+        - Bazel
+        - Meson
+        - SCons
+        - Buck/Blaze
+        - xmake
+    - Package Managers
+        - vcpkg
+        - Conan
+        - Hunter
+        - CPM
+        - Integration with Build Systems
+    - Dependency Management
+        - External Dependencies
+        - Vendoring vs Package Management
+        - Transitive Dependencies
+        - Version Constraints
+        - ABI Compatibility
+    - Modularization
+        - C++20 Modules
+        - Precompiled Headers
+        - Unity Builds
+        - Physical Design
+        - Logical Cohesion
+    - Project Structure
+        - Directory Organization
+        - Component Separation
+        - Public/Private Headers
+        - Source Organization
+        - Test Organization
+    - Version Control Integration
+        - Git Workflows
+        - Continuous Integration
+        - Feature Branches
+        - Release Management
+    - Cross-platform Building
+        - Platform Detection
+        - Feature Detection
+        - Conditional Compilation
+        - Platform Abstraction
+        - Cross Compilation
+    - Distribution Packaging
+        - Installers
+        - Static vs Dynamic Linking
+        - Runtime Dependencies
+        - Deployment Strategies
+    - Build Configuration
+        - Debug vs Release Builds
+        - Optimization Levels
+        - Feature Flags
+        - Conditional Features
+        - Build Variants
+
+## Module 11: Domain-Specific C++ Programming
+
+1. **Game Development with C++**
+
+    - Game Engine Architecture
+        - Component Systems
+        - Entity-Component Systems
+        - Scene Graphs
+        - Update Loops
+        - Fixed vs Variable Timesteps
+    - Game Physics
+        - Collision Detection Algorithms
+        - Collision Resolution
+        - Rigid Body Dynamics
+        - Soft Body Simulation
+        - Physics Engines Integration
+    - 3D Graphics Programming
+        - Rendering Pipeline
+        - Shader Programming
+        - Graphics API Integration (OpenGL, DirectX, Vulkan)
+        - Scene Management
+        - Culling Techniques
+    - 2D Graphics
+        - Sprite Rendering
+        - Tile Maps
+        - Particle Systems
+        - 2D Physics
+    - Animation Systems
+        - Skeletal Animation
+        - Keyframe Animation
+        - Animation Blending
+        - Procedural Animation
+    - Game AI
+        - Pathfinding Algorithms
+        - Behavior Trees
+        - State Machines
+        - Decision Making
+        - Goal-oriented Action Planning
+    - Audio Programming
+        - Audio APIs
+        - Sound Synthesis
+        - Spatial Audio
+        - Audio Mixing
+        - Streaming Audio
+    - Input Handling
+        - Keyboard/Mouse Processing
+        - Gamepad Support
+        - Input Mapping
+        - Gesture Recognition
+    - Memory Management for Games
+        - Custom Allocators
+        - Memory Pools
+        - Resource Caching
+        - Asset Streaming
+    - Networking for Games
+        - Client-Server Model
+        - Peer-to-Peer
+        - State Synchronization
+        - Lag Compensation
+        - Interest Management
+    - Game Loop Optimization
+        - Frame Rate Management
+        - Load Balancing
+        - Level of Detail
+        - Occlusion Culling
+    - Scripting Integration
+        - Lua Bindings
+        - Python Integration
+        - JavaScript Engines
+        - Visual Scripting
+
+2. **Embedded Systems Programming**
+
+    - Embedded C++
+        - Language Subset Selection
+        - Memory Footprint Considerations
+        - Performance Constraints
+        - No-Exception Programming
+        - No-RTTI Programming
+    - Hardware Abstraction
+        - Register Access
+        - Memory-mapped I/O
+        - Peripheral Interfaces
+        - Device Drivers
+    - Real-time Programming
+        - Real-time Constraints
+        - Deterministic Behavior
+        - Timing Analysis
+        - Priority Inversion
+        - Deadlines and Scheduling
+    - Interrupt Handling
+        - ISR (Interrupt Service Routines)
+        - Interrupt Latency
+        - Interrupt Priorities
+        - Shared Resources Protection
+    - Bare-metal Programming
+        - Startup Code
+        - Vector Tables
+        - Linker Scripts
+        - Memory Layout
+        - Stack Setup
+    - RTOS Integration
+        - Task Management
+        - Synchronization Primitives
+        - Message Queues
+        - Timer Services
+        - RTOS Selection
+    - Memory Management
+        - Static Allocation
+        - Pool-based Allocation
+        - Stack Usage Analysis
+        - Heap Fragmentation
+        - Zero-copy Techniques
+    - Low-power Design
+        - Sleep Modes
+        - Power States
+        - Clock Management
+        - Peripheral Power Control
+    - Communication Protocols
+        - Serial Protocols (UART, SPI, I2C)
+        - CAN, LIN, FlexRay
+        - USB, Ethernet
+        - Wireless Protocols
+    - Firmware Update
+        - Bootloaders
+        - Over-the-air Updates
+        - Fail-safe Updates
+        - Versioning
+    - Testing and Debugging
+        - JTAG/SWD Debugging
+        - Logic Analyzers
+        - Simulation
+        - Hardware-in-loop Testing
+    - Safety-critical Systems
+        - MISRA C++ Guidelines
+        - Certification Requirements
+        - Formal Verification
+        - Fault Tolerance
+        - Redundancy Patterns
+
+3. **High-Performance Computing**
+
+    - CPU Architecture Optimization
+        - Instruction Pipelining
+        - Branch Prediction
+        - Cache Hierarchies
+        - Out-of-order Execution
+        - Memory Prefetching
+    - SIMD Programming
+        - SSE/AVX Intrinsics
+        - AVX-512
+        - NEON for ARM
+        - Vectorization Techniques
+        - Data Layout for SIMD
+    - Parallel Computing Models
+        - Shared Memory
+        - Distributed Memory
+        - PGAS (Partitioned Global Address Space)
+        - Data Parallelism
+        - Task Parallelism
+    - Parallel Programming Libraries
+        - OpenMP
+        - MPI (Message Passing Interface)
+        - TBB (Threading Building Blocks)
+        - HPX (High Performance ParalleX)
+        - Cilk Plus
+    - GPU Computing
+        - CUDA Programming
+        - OpenCL
+        - C++ AMP
+        - Heterogeneous Computing
+        - CPU-GPU Coordination
+    - Memory Optimization
+        - Cache Optimization
+        - NUMA Awareness
+        - Memory Bandwidth Optimization
+        - Memory Latency Hiding
+        - False Sharing Elimination
+    - Algorithmic Optimization
+        - Algorithm Selection
+        - Algorithmic Transformations
+        - Loop Optimization
+        - Space-Time Tradeoffs
+        - I/O Optimization
+    - Scalability
+        - Strong Scaling
+        - Weak Scaling
+        - Amdahl's Law
+        - Gustafson's Law
+        - Load Balancing
+    - Performance Analysis
+        - Profiling Tools
+        - Performance Counters
+        - Roofline Model
+        - Bottleneck Identification
+        - Performance Modeling
+    - Domain-specific Languages
+        - Expression Templates
+        - Embedded DSLs
+        - Compiler Extensions
+        - Metaprogramming for HPC
+    - HPC Applications
+        - Scientific Computing
+        - Financial Modeling
+        - Computational Fluid Dynamics
+        - Molecular Dynamics
+        - Machine Learning
+
+4. **Networking and Distributed Systems**
+
+    - Network Protocol Implementation
+        - Protocol State Machines
+        - Packet Processing
+        - Framing and Parsing
+        - Error Detection/Correction
+        - Flow Control
+    - High-performance Networking
+        - Zero-copy Techniques
+        - Kernel Bypass (DPDK, Netmap)
+        - User-space TCP/IP Stacks
+        - RDMA (Remote Direct Memory Access)
+        - NIC Offloading
+    - Network Security
+        - TLS/SSL Implementation
+        - Certificate Handling
+        - Secure Protocols
+        - Authentication
+        - Authorization
+    - Distributed Systems Architecture
+        - Client-Server
+        - Peer-to-Peer
+        - Microservices
+        - Service Mesh
+        - Event-driven Architecture
+    - Distributed Algorithms
+        - Consensus Protocols
+        - Leader Election
+        - Distributed Transactions
+        - Replication Strategies
+        - Consistency Models
+    - Service Discovery
+        - DNS-based Discovery
+        - Centralized vs Decentralized
+        - Service Registries
+        - Health Checking
+        - Load Balancing
+    - Remote Procedure Calls
+        - gRPC
+        - Apache Thrift
+        - Protocol Buffers
+        - Interface Definition Languages
+        - Serialization Formats
+    - Messaging Systems
+        - Message Queues
+        - Publish-Subscribe
+        - Event Streaming
+        - Message Brokers
+        - Message Reliability
+    - Distributed Storage
+        - Distributed File Systems
+        - Distributed Databases
+        - Object Storage
+        - Caching Strategies
+        - Partitioning Schemes
+    - Fault Tolerance
+        - Failure Detection
+        - Recovery Mechanisms
+        - Circuit Breakers
+        - Bulkheads
+        - Retry Policies
+    - Monitoring and Observability
+        - Metrics Collection
+        - Distributed Tracing
+        - Log Aggregation
+        - Alerting
+        - Performance Analysis
+
+5. **Database and Storage Systems**
+
+    - Database Connectivity
+        - ODBC
+        - JDBC Bridges
+        - Native Database APIs
+        - Database-specific C++ APIs
+    - SQL Database Interaction
+        - Query Construction
+        - Prepared Statements
+        - Result Set Processing
+        - Transactions
+        - Connection Pooling
+    - NoSQL Database Integration
+        - Document Databases
+        - Key-Value Stores
+        - Column Databases
+        - Graph Databases
+        - Time Series Databases
+    - Object-Relational Mapping
+        - ORM Design
+        - Mapping Strategies
+        - Relationship Handling
+        - Lazy Loading
+        - Caching
+    - Database Design Patterns
+        - Repository Pattern
+        - Unit of Work
+        - Query Object
+        - Active Record
+        - Data Mapper
+    - In-memory Databases
+        - Data Structures
+        - Concurrency Control
+        - Persistence Strategies
+        - Recovery Mechanisms
+    - Storage Engine Internals
+        - B-Tree Implementations
+        - LSM Trees
+        - Indexing Techniques
+        - Storage Formats
+        - Buffer Management
+    - Database Transactions
+        - ACID Properties
+        - Isolation Levels
+        - Optimistic vs Pessimistic Concurrency
+        - Deadlock Detection
+        - Two-phase Commit
+    - Database Performance
+        - Query Optimization
+        - Index Selection
+        - Execution Plans
+        - Caching Strategies
+        - Partitioning
+    - Storage Systems
+        - File Systems
+        - Block Storage
+        - Object Storage
+        - Distributed Storage
+        - Cache Hierarchies
+
+6. **GUI Programming**
+    - GUI Frameworks
+        - Qt
+            - Qt Widgets
+            - Qt Quick (QML)
+            - Qt 3D
+            - Qt Concurrent
+            - Qt Network
+        - wxWidgets
+            - Widget Hierarchy
+            - Event System
+            - Custom Controls
+            - Platform Integration
+        - GTK+
+        - FLTK
+        - ImGui (Immediate Mode GUI)
+    - UI Architecture Patterns
+        - Model-View-Controller
+        - Model-View-Presenter
+        - Model-View-ViewModel
+        - Flux/Redux
+        - Component-based UI
+    - Event Handling
+        - Event Loops
+        - Event Propagation
+        - Event Filtering
+        - Custom Events
+        - Signals and Slots (Qt)
+    - Rendering and Graphics
+        - 2D Drawing APIs
+        - Hardware Acceleration
+        - Direct3D/OpenGL Integration
+        - Canvas-based Rendering
+        - Vector Graphics
+    - Layout Management
+        - Box Models
+        - Grid Layouts
+        - Constraint-based Layouts
+        - Flow Layouts
+        - Custom Layouts
+    - Styling and Theming
+        - CSS-like Styling
+        - Theme Engines
+        - Style Sheets
+        - Custom Widget Appearance
+        - Skinning
+    - UI Components
+        - Standard Controls
+        - Custom Controls
+        - Composite Controls
+        - Data-bound Controls
+        - Virtual Controls
+    - Accessibility
+        - Screen Readers
+        - Keyboard Navigation
+        - High Contrast
+        - Accessibility APIs
+        - Internationalization
+    - Desktop Integration
+        - Native Look and Feel
+        - System Services
+        - Drag and Drop
+        - Clipboard
+        - File Associations
+    - Multimedia
+        - Audio/Video Playback
+        - Capture Devices
+        - Media Processing
+        - Streaming
+        - Effects
+
+## Module 12: Advanced Topics and Modern C++ Evolution
+
+1. **C++ and Parallelism**
+
+    - C++17 Parallel Algorithms
+        - Execution Policies
+        - Parallel Algorithm Implementations
+        - Performance Considerations
+    - C++20 Coroutines
+        - Coroutine Machinery
+        - Coroutine Promise
+        - Awaitables
+        - Use Cases
+    - C++23 Executors
+        - Executor Concepts
+        - Execution Contexts
+        - Customization Points
+        - Sender/Receiver Model
+    - Task-based Programming
+        - Task Graphs
+        - Task Stealing
+        - Task Priorities
+        - Continuation Tasks
+    - Advanced Thread Management
+        - Thread Pools
+        - Work Stealing
+        - Thread Affinity
+        - Thread Local Storage
+    - Lock-free Programming
+        - Atomic Operations
+        - Memory Ordering
+        - Lock-free Data Structures
+        - ABA Problem
+        - Memory Reclamation
+    - Wait-free Algorithms
+        - Progress Guarantees
+        - Helping Mechanism
+        - Wait-free Data Structures
+    - Parallel Patterns
+        - Map-Reduce
+        - Fork-Join
+        - Pipeline
+        - Stencil
+        - Scan
+    - Heterogeneous Computing
+        - CPU-GPU Coordination
+        - Offloading Computation
+        - Zero-copy Data Transfer
+        - Heterogeneous Memory Management
+    - Future Directions
+        - Fibers
+        - Dataflow Programming
+        - Work Graphs
+        - SIMT Programming
+
+2. **C++ and Functional Programming**
+
+    - Functional Programming Principles
+        - Pure Functions
+        - Immutability
+        - First-class Functions
+        - Higher-order Functions
+        - Referential Transparency
+    - Functional Data Structures
+        - Persistent Data Structures
+        - Immutable Collections
+        - Structural Sharing
+        - Lazy Sequences
+    - Function Composition
+        - Pipelines
+        - Combinators
+        - Function Adapters
+        - Currying and Partial Application
+    - Monads in C++
+        - Option/Maybe
+        - Either/Result
+        - List Monad
+        - State Monad
+        - IO Monad
+    - Expression Templates
+        - Lazy Evaluation
+        - Operator Fusion
+        - Domain-specific Languages
+        - Symbolic Computation
+    - Pattern Matching
+        - Variant Visitors
+        - Structural Decomposition
+        - Match Expressions
+        - Pattern Guards
+    - Recursive Algorithms
+        - Tail Recursion
+        - Memoization
+        - Continuation-passing Style
+        - Fixed-point Combinators
+    - Functional Reactive Programming
+        - Observables
+        - Signals
+        - Event Streams
+        - Time-varying Values
+    - Algebraic Effects
+        - Effect Systems
+        - Handlers
+        - Resumable Exceptions
+        - Effect Composition
+    - Property-based Testing
+        - Generators
+        - Properties
+        - Shrinking
+        - Combinatorial Testing
+
+3. **C++ and Metaprogramming**
+
+    - Advanced Template Metaprogramming
+        - Higher-order Metafunctions
+        - Lambda Expressions in TMP
+        - Recursion Schemes
+        - Fixed-point Combinators
+    - Code Generation
+        - Run-time Code Generation
+        - Just-in-time Compilation
+        - Domain-specific Language Processing
+        - Template Expansion
+    - Reflection Techniques
+        - Static Reflection
+        - Type Introspection
+        - Attribute Processing
+        - Metadata Extraction
+    - Expression Templates
+        - Lazy Evaluation
+        - Operator Fusion
+        - Expression Trees
+        - Advanced Expression Template Techniques
+    - Policy-based Design
+        - Policy Selection
+        - Policy Composition
+        - Policy Customization
+        - Policy-based Classes
+    - Static Polymorphism
+        - CRTP Idioms
+        - Barton-Nackman Trick
+        - Static Interfaces
+        - Mixin Composition
+    - Metaprogramming Libraries
+        - Boost.MP11
+        - Boost.Hana
+        - Brigand
+        - metal
+        - kvasir::mpl
+    - Domain-specific Embedded Languages
+        - Parser Combinators
+        - Expression DSLs
+        - Type-level DSLs
+        - API Design for DSLs
+    - Compile-time String Processing
+        - String Literals as Template Parameters
+        - Compile-time String Manipulation
+        - Compile-time Parsing
+        - String Interning
+    - Advanced Concepts Usage (C++20)
+        - Concept Composition
+        - Subsumption Rules
+        - Concept-based Overloading
+        - Partial Specialization with Concepts
+
+4. **C++ in the Age of Modern Computing**
+    - C++ and Machine Learning
+        - Tensor Libraries
+        - Neural Network Implementations
+        - ML Framework Integration
+        - Inference Engines
+        - Model Training
+    - C++ in Cloud Computing
+        - Containerization
+        - Microservices
+        - Serverless Computing
+        - Cloud APIs
+        - Cloud-native Applications
+    - C++ and Edge Computing
+        - Resource-constrained Devices
+        - IoT Programming
+        - Edge-Cloud Coordination
+        - Real-time Data Processing
+        - Local Intelligence
+    - C++ and WebAssembly
+        - Compilation to WASM
+        - Browser Integration
+        - Performance Considerations
+        - C++ Libraries in the Browser
+        - WASM System Interface
+    - C++ and Quantum Computing
+        - Quantum Algorithms
+        - Quantum Simulators
+        - Quantum Computer Interfaces
+        - Hybrid Classical-Quantum Computation
+    - C++ and Modern Hardware
+        - Heterogeneous Architectures
+        - FPGA Programming
+        - Advanced CPU Features
+        - Specialized Hardware Acceleration
+        - Non-volatile Memory
+    - C++ and Real-time Systems
+        - Hard Real-time Constraints
+        - Soft Real-time Systems
+        - Predictable Performance
+        - Timing Analysis
+        - Safety-critical Systems
+    - C++ and High Frequency Trading
+        - Ultra-low Latency
+        - Deterministic Performance
+        - Lock-free Algorithms
+        - FPGA Integration
+        - Time Synchronization
+    - C++ in Scientific Computing
+        - Numerical Methods
+        - Simulation Frameworks
+        - Visualization
+        - Large-scale Data Processing
+        - High-performance Libraries
+    - C++ Future Directions
+        - Evolution of C++ Standards
+        - Emerging Programming Paradigms
+        - Cross-language Interoperability
+        - Performance vs Productivity
+        - Compatibility Challenges
+
+## Module 13: Project Implementation and Mastery Demonstration
+
+1. **Comprehensive Project: Building a High-Performance Library**
+
+    - Library Design Principles
+        - API Design
+        - Interface Stability
+        - Versioning Strategy
+        - Documentation Standards
+        - Error Handling Philosophy
+    - Implementation Architecture
+        - Component Decomposition
+        - Internal Dependencies
+        - External Dependencies
+        - Extension Points
+        - Configuration System
+    - Memory Management Strategy
+        - Resource Ownership
+        - Custom Allocators
+        - Memory Pool Design
+        - Object Lifecycle
+        - Cache-friendly Structures
+    - Concurrency Model
+        - Thread Safety Guarantees
+        - Synchronization Primitives
+        - Task Decomposition
+        - Lock-free Components
+        - Concurrency Documentation
+    - Performance Optimization
+        - Critical Path Analysis
+        - Algorithmic Improvements
+        - Memory Access Patterns
+        - SIMD Optimization
+        - Compile-time Computation
+    - Error Handling
+        - Exception Design
+        - Error Codes
+        - Assertions
+        - Logging Strategy
+        - Debug Facilities
+    - Testing
+        - Unit Testing
+        - Integration Testing
+        - Performance Testing
+        - Fuzzing
+        - Regression Testing
+    - Documentation
+        - API Documentation
+        - Implementation Notes
+        - Usage Examples
+        - Performance Guidelines
+        - Troubleshooting
+    - Deployment
+        - Build System
+        - Package Management
+        - Continuous Integration
+        - Version Control Workflow
+        - Release Process
+
+2. **Project: Advanced Data Structure Implementation**
+
+    - Data Structure Selection
+        - Use Case Analysis
+        - Performance Requirements
+        - Memory Constraints
+        - Interface Requirements
+        - Existing Alternatives
+    - Implementation Strategy
+        - Core Algorithms
+        - Memory Layout
+        - Iterator Design
+        - Thread Safety Considerations
+        - Exception Safety
+    - Template Design
+        - Template Parameters
+        - Specializations
+        - SFINAE Constraints
+        - Concepts (C++20)
+        - Type Traits Integration
+    - Optimization Techniques
+        - Branch Reduction
+        - Cache Optimization
+        - SIMD Utilization
+        - Lock-free Operations
+        - Memory Prefetching
+    - Benchmarking
+        - Micro-benchmarks
+        - Comparative Analysis
+        - Statistical Analysis
+        - Visualization
+        - Performance Models
+    - Integration with Standard Library
+        - Algorithm Compatibility
+        - Container Requirements
+        - Allocator Support
+        - Iterator Categories
+        - Range Support (C++20)
+    - Advanced Features
+        - Heterogeneous Lookup
+        - Custom Hash Functions
+        - Three-way Comparison
+        - Serialization Support
+        - Persistent Storage
+
+3. **Project: Cross-platform Application Framework**
+
+    - Platform Abstraction
+        - Operating System Differences
+        - Compiler Differences
+        - Standard Library Variations
+        - Platform-specific Features
+        - Unified API Design
+    - Build System
+        - Cross-platform Building
+        - Dependency Management
+        - Configuration Management
+        - Platform Detection
+        - Feature Detection
+    - User Interface
+        - Native UI vs Cross-platform UI
+        - Rendering Abstraction
+        - Input Handling
+        - Accessibility
+        - Internationalization
+    - File System Abstraction
+        - Path Handling
+        - File Operations
+        - Directory Management
+        - File Watching
+        - Special Directories
+    - Networking
+        - Socket Abstraction
+        - Protocol Implementation
+        - Network Discovery
+        - Security Layer
+        - Async Operations
+    - Threading and Concurrency
+        - Thread Abstraction
+        - Synchronization Primitives
+        - Task Scheduling
+        - Thread Pools
+        - Fiber Support
+    - Interprocess Communication
+        - Shared Memory
+        - Message Passing
+        - Named Pipes
+        - Signals
+        - Remote Procedure Calls
+    - Plugin Architecture
+        - Dynamic Loading
+        - Interface Definition
+        - Version Compatibility
+        - Resource Isolation
+        - Plugin Discovery
+    - Testing and Deployment
+        - Platform-specific Testing
+        - Continuous Integration
+        - Packaging
+        - Installation
+        - Auto-update Mechanisms
+
+4. **Capstone Project: Advanced C++ System**
+    - Requirements Analysis
+        - Functional Requirements
+        - Non-functional Requirements
+        - Use Cases
+        - Performance Goals
+        - Scalability Targets
+    - Architecture Design
+        - Component Decomposition
+        - Interface Design
+        - Data Flow
+        - Control Flow
+        - Extension Points
+    - Technology Selection
+        - C++ Standard Version
+        - External Libraries
+        - Third-party Components
+        - Build System
+        - Deployment Environment
+    - Implementation Strategy
+        - Coding Standards
+        - Error Handling
+        - Logging and Diagnostics
+        - Performance Monitoring
+        - Security Considerations
+    - Advanced C++ Features Usage
+        - Template Metaprogramming
+        - Move Semantics Optimization
+        - Concurrency Model
+        - Compile-time Computation
+        - Modern Language Features
+    - Quality Assurance
+        - Test Plan
+        - Code Review Process
+        - Static Analysis
+        - Dynamic Analysis
+        - Performance Testing
+    - Documentation
+        - Architecture Documentation
+        - API Documentation
+        - User Documentation
+        - Implementation Notes
+        - Maintenance Guide
+    - Deployment and Maintenance
+        - Deployment Strategy
+        - Upgrade Path
+        - Backward Compatibility
+        - Monitoring and Telemetry
+        - Support Process
