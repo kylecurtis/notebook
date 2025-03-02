@@ -1,0 +1,266 @@
+-   **Month 1: C++ Fundamentals and Environment Setup**
+    -   **Development Environment Setup**
+        -   Installing modern compilers (GCC, Clang, MSVC)
+        -   Configuring IDEs/editors (Visual Studio, VSCode, CLion)
+        -   Setting up debugging tools and version control (git)
+        -   Building and running your first “Hello World” program
+    -   **Basic Syntax and Types**
+        -   Understanding program structure (headers, `main()` function)
+        -   Fundamental data types (`int`, `double`, `char`, `bool`)
+        -   Input/output operations with `std::cin` and `std::cout`
+        -   Preprocessor directives and header files
+    -   **Variables, Operators, and Control Flow**
+        -   Variable declaration, initialization, scope, and lifetime
+        -   Arithmetic, comparison, logical, and assignment operators
+        -   Conditional statements (`if`, `else`, `switch`)
+        -   Loop constructs (`for`, `while`, `do-while`) and control keywords (`break`, `continue`)
+    -   **Functions and Modern Best Practices**
+        -   Defining and calling functions; understanding parameters and return types
+        -   Pass-by-value versus pass-by-reference
+        -   Function overloading and default arguments
+        -   Intro to inline functions and recursion
+        -   Coding style tips: clear naming conventions, avoiding `using namespace std;` in headers
+-   **Month 2: Understanding Memory and Pointers**
+    -   **Memory Models: Stack vs. Heap**
+        -   Differentiating stack memory (automatic variables) from heap memory (dynamic allocation)
+        -   Memory layout and lifetime of variables
+    -   **Pointers and References**
+        -   Declaring pointers and using the dereference operator
+        -   Working with references and the differences from pointers
+        -   Null pointers, dangling pointers, and safety precautions
+    -   **Dynamic Memory Management**
+        -   Allocating and freeing memory with `new`/`delete` (single objects and arrays)
+        -   Common pitfalls: memory leaks and double deletion
+    -   **Resource Acquisition Is Initialization (RAII)**
+        -   Concept of tying resource management to object lifetime
+        -   Examples of RAII in practice (file handles, memory buffers)
+    -   **Smart Pointers and Best Practices**
+        -   Using `std::unique_ptr` with `std::make_unique` for exclusive ownership
+        -   Understanding `std::shared_ptr` and `std::weak_ptr` for shared ownership
+    -   **Debugging Memory Issues**
+        -   Tools like Valgrind and sanitizers (AddressSanitizer, UndefinedBehaviorSanitizer)
+        -   Techniques for detecting memory leaks and pointer misuse
+-   **Month 3: Core Object-Oriented Programming (OOP) in C++**
+    -   **Classes and Structures**
+        -   Defining classes and structs: data members vs. member functions
+        -   Access specifiers: `public`, `private`, and `protected`
+    -   **Constructors and Destructors**
+        -   Default, parameterized, and copy constructors
+        -   The role of destructors and why virtual destructors matter in inheritance
+    -   **Member Functions and the `this` Pointer**
+        -   Calling member functions and using the implicit `this` pointer
+        -   Const member functions and their benefits
+    -   **Inheritance and Polymorphism**
+        -   Implementing inheritance (public, protected, private)
+        -   Overriding virtual functions for runtime polymorphism
+        -   Abstract classes and pure virtual functions
+    -   **Operator Overloading and Advanced OOP**
+        -   Overloading operators (arithmetic, comparison)
+        -   Best practices: member vs. non-member function overloading
+    -   **Basic UML and Object Design**
+        -   Visualizing class relationships and hierarchies
+        -   Introduction to design principles (e.g., SOLID)
+-   **Month 4: Advanced Language Features – Value Semantics and Exceptions**
+    -   **Copy and Move Semantics**
+        -   Rule of Three/Five: copy constructor, copy assignment, destructor, move constructor, move assignment
+        -   Using `std::move` to implement move semantics efficiently
+    -   **Const-Correctness**
+        -   Marking member functions as `const`
+        -   Understanding mutable data and constant objects
+    -   **Exception Handling**
+        -   Throwing and catching exceptions with try-catch blocks
+        -   How stack unwinding works during exceptions
+    -   **Writing Exception-Safe Code**
+        -   Strategies for resource cleanup using RAII
+        -   Exception safety guarantees (basic, strong, no-throw)
+    -   **Static Members and Namespaces**
+        -   Declaring and using static data and functions within classes
+        -   Organizing code with namespaces and understanding `enum class`
+-   **Month 5: Templates and Generic Programming**
+    -   **Function and Class Templates**
+        -   Creating generic functions and classes using template syntax
+        -   Examples: generic max/min functions, container-like class templates
+    -   **Template Specialization**
+        -   Full and partial specialization to tailor behavior for specific types
+    -   **Advanced Template Concepts**
+        -   Managing dependent names with `typename` and `template` keywords
+        -   Understanding compile-time vs. run-time in template instantiation
+    -   **C++20 Concepts**
+        -   Introduction to concepts for constraining templates
+        -   Using standard concepts (e.g., `std::integral`) and creating custom concepts
+-   **Month 6: The Standard Library – STL Containers and Algorithms**
+    -   **Sequence Containers**
+        -   Deep dive into `std::vector`: usage, dynamic resizing, performance considerations
+        -   Overview of `std::deque` and `std::list`: when and why to use them
+    -   **Associative Containers**
+        -   Understanding ordered containers (`std::set`, `std::map`) vs. unordered containers (`std::unordered_set`, `std::unordered_map`)
+        -   Trade-offs: ordered vs. hash-based lookups
+    -   **Container Adaptors**
+        -   Working with `std::stack`, `std::queue`, and `std::priority_queue`
+    -   **Iterators and Ranges**
+        -   Types of iterators and how to use them (begin/end, range-based loops)
+        -   Introduction to the ranges library for cleaner data processing
+    -   **STL Algorithms**
+        -   Common algorithms: `std::sort`, `std::find`, `std::accumulate`, `std::transform`
+        -   Utilizing lambda expressions for custom algorithm behavior
+        -   Analyzing complexity and performance of STL algorithms
+    -   **Best Practices**
+        -   Leveraging STL to avoid reinventing common data structures
+        -   Understanding when to use which container or algorithm for optimal performance
+-   **Month 7: Concurrency and Multithreading Basics**
+    -   **Fundamentals of Multithreading**
+        -   Importance of concurrency in modern applications
+        -   Basic concepts: parallelism, race conditions, and thread safety
+    -   **Creating and Managing Threads**
+        -   Using `std::thread` to launch new threads
+        -   Passing arguments and managing thread lifecycles (joining, detaching)
+    -   **Synchronization Mechanisms**
+        -   Mutexes: `std::mutex`, `std::lock_guard`, and `std::unique_lock`
+        -   Condition variables: using `std::condition_variable` to coordinate threads
+        -   Atomic operations with `std::atomic` for lock-free programming
+    -   **Parallel STL Algorithms**
+        -   Using C++17 execution policies (e.g., `std::execution::par`)
+        -   Benefits and caveats of parallelizing STL algorithms
+    -   **Practical Multithreading Project**
+        -   Building a small application that uses multiple threads
+        -   Debugging and resolving concurrency issues (deadlocks, race conditions)
+-   **Month 8: Advanced Modern C++ (C++20 and C++23 Features)**
+    -   **Compile-Time Computation with `constexpr`**
+        -   Writing `constexpr` functions and variables for compile-time evaluation
+        -   Practical examples: compile-time factorials, Fibonacci, etc.
+    -   **Ranges Library**
+        -   Understanding `<ranges>` components and range adapters (e.g., `views::filter`, `views::transform`)
+        -   Composing range pipelines for expressive data manipulation
+    -   **Concepts and Constraints**
+        -   Applying standard and custom concepts to template parameters
+        -   Benefits of improved compile-time error messages
+    -   **Modules**
+        -   Introduction to modules and the transition from header files
+        -   Basic syntax for module declarations and imports
+        -   Overview of current compiler support and practical tips
+    -   **Coroutines**
+        -   Fundamentals of coroutines: `co_await`, `co_yield`, `co_return`
+        -   Use cases: asynchronous programming and generators
+    -   **Modern Utility Types**
+        -   Using `std::optional` for representing optional values
+        -   Leveraging `std::variant` for type-safe unions
+        -   Utilizing `std::span` for non-owning array views
+    -   **Modern String Formatting**
+        -   Overview of the `<format>` library and comparisons to traditional methods
+    -   **Highlights from C++23**
+        -   New library features (e.g., `std::expected`) and language improvements
+        -   Incremental best practices from the latest proposals
+-   **Month 9: Debugging, Testing, and Performance Tuning**
+    -   **Advanced Debugging Techniques**
+        -   Using debuggers (GDB, Visual Studio Debugger) to step through code
+        -   Setting breakpoints, inspecting variables, and interpreting stack traces
+    -   **Logging and Assertions**
+        -   Effective use of `assert()` for runtime checks
+        -   Implementing logging strategies (using `std::cerr` or logging libraries)
+    -   **Unit Testing Frameworks**
+        -   Overview of frameworks (Google Test, Catch2, doctest)
+        -   Structuring tests for functions and classes
+        -   Measuring test coverage and understanding regression testing
+    -   **Test-Driven Development (TDD)**
+        -   Principles of writing tests before code
+        -   Practical TDD exercises in C++
+    -   **Static Analysis and Code Quality Tools**
+        -   Configuring and using cppcheck, Clang-Tidy, etc.
+        -   Integrating static analysis into your workflow
+    -   **Profiling and Performance Analysis**
+        -   Using tools like Valgrind, gprof, and Visual Studio Profiler
+        -   Identifying bottlenecks and analyzing algorithmic complexity
+    -   **Optimization Techniques**
+        -   Advanced compiler optimizations (inlining, loop unrolling)
+        -   Using PGO (Profile-Guided Optimization) and LTO (Link-Time Optimization)
+        -   Case studies: measuring performance before and after optimization
+    -   **Avoiding Premature Optimization**
+        -   Understanding when optimization is truly needed
+        -   Balancing clear code with performance requirements
+-   **Month 10: Data Structures & Algorithms Mastery (Deep Dive)**
+    -   **Implementing Core Data Structures Manually**
+        -   **Linked Lists:**
+            -   Singly linked list: node structure, insertion, deletion, traversal
+            -   Doubly linked list: bidirectional navigation, pros/cons
+        -   **Stack and Queue:**
+            -   Implementing using arrays vs. linked lists; typical operations
+        -   **Binary Trees:**
+            -   Creating a binary tree, implementing in-order, pre-order, and post-order traversals
+        -   **Binary Search Trees (BSTs):**
+            -   Enforcing BST properties; search, insert, delete operations
+            -   Overview of balanced trees (AVL, Red-Black Trees)
+        -   **Graphs:**
+            -   Representations using adjacency lists and matrices
+            -   Basic graph operations to set up for traversals
+    -   **Algorithm Implementations and Problem Solving**
+        -   **Searching Algorithms:**
+            -   Linear search vs. binary search (recursive and iterative implementations)
+        -   **Sorting Algorithms:**
+            -   Implementing simple sorts (bubble, selection, insertion) and advanced sorts (quicksort, mergesort)
+        -   **Recursion and Backtracking:**
+            -   Classic problems: permutations, N-Queens, maze solving
+        -   **Dynamic Programming (DP):**
+            -   Memoization vs. tabulation strategies; sample problems (Fibonacci, knapsack)
+        -   **Graph Algorithms:**
+            -   Implementing BFS and DFS; overview of Dijkstra’s algorithm for shortest paths
+    -   **Integrating STL with Custom DS&A**
+        -   Combining STL containers with hand-implemented algorithms
+        -   Leveraging iterators and lambda expressions for cleaner solutions
+    -   **Complexity Analysis**
+        -   Time and space complexity (Big O notation) for each structure/algorithm
+        -   Trade-offs and optimization decisions
+    -   **Competitive Programming Drills**
+        -   Timed practice with LeetCode-style problems
+        -   Categorizing problems and reviewing common patterns
+-   **Month 11: Competitive Programming and Interview Preparation**
+    -   **Advanced Data Structures for Contests**
+        -   **Union-Find (Disjoint Set Union):**
+            -   Implementation details; path compression and union by rank
+        -   **Fenwick Tree (Binary Indexed Tree):**
+            -   Structure and operations for prefix sums
+        -   **Segment Tree:**
+            -   Range query handling, updates, and lazy propagation basics
+        -   **Trie (Prefix Tree):**
+            -   Fast lookup for strings and auto-complete scenarios
+        -   **Custom Heap Implementations:**
+            -   Understanding min-heap vs. max-heap; practical contest uses
+    -   **Advanced Algorithmic Techniques**
+        -   **Two-Pointer Technique & Sliding Window:**
+            -   Solving subarray and substring problems efficiently
+        -   **Greedy Algorithms:**
+            -   Recognizing greedy problem structures; examples (interval scheduling)
+        -   **Backtracking with Optimization:**
+            -   Pruning strategies in recursive solutions
+        -   **Mathematical Algorithms:**
+            -   Prime sieves, modulo arithmetic, GCD/LCM computations
+    -   **Simulated Contest Environments**
+        -   Timed practice sessions, mock contests, and rapid problem solving
+        -   Strategies for quick debugging and iterative refinement under pressure
+    -   **Interview-Specific Preparation**
+        -   Practicing common C++ interview questions and explaining your solutions
+        -   Whiteboard coding exercises and algorithm explanation practice
+        -   Integrating system design basics with DS&A understanding
+-   **Month 12: Capstone Project and Final Preparations**
+    -   **Capstone Project Development**
+        -   Project planning: defining scope, requirements, and architecture
+        -   Implementation using modern C++ features (templates, STL, concurrency)
+        -   Iterative development, testing, and refinement
+    -   **Build Management with CMake**
+        -   Writing and configuring `CMakeLists.txt` for cross-platform builds
+        -   Managing build types: Debug vs. Release, and integration of sanitizers
+    -   **Documentation and Version Control**
+        -   Writing comprehensive READMEs and inline documentation
+        -   Generating API documentation with Doxygen or similar tools
+        -   Mastering git workflows (branching, merging, commit conventions)
+    -   **Debugging, Profiling, and Optimization in a Real Project**
+        -   Applying advanced debugging techniques in a capstone project
+        -   Profiling code performance and iterative optimization based on data
+        -   Incorporating feedback from static analysis and testing tools
+    -   **Interview and Job Preparation**
+        -   Reviewing all major topics and refining your technical story
+        -   Practicing technical interview questions and mock interviews
+        -   Preparing to discuss your capstone project and technical challenges
+    -   **Continuous Learning and Future Directions**
+        -   Identifying areas for further specialization (advanced concurrency, domain-specific libraries)
+        -   Engaging with the C++ community (conferences, online forums, open source)
+        -   Setting up a roadmap for lifelong learning in modern C++ development
