@@ -1,0 +1,307 @@
+# Python Programming Masterclass: Table of Contents
+
+-   Python Foundations
+    -   Installation and setup across operating systems
+    -   Python interpreter and REPL
+    -   Running Python scripts
+    -   Virtual environments with venv
+    -   Package management with pip
+    -   Code editors and IDEs (PyCharm, VS Code, Jupyter)
+-   Basic Syntax
+    -   Statements and expressions
+    -   Comments and documentation
+    -   Indentation and whitespace
+    -   Naming conventions
+    -   Reserved keywords
+    -   Line continuation
+-   Variables and Memory Management
+    -   Variable assignment and reassignment
+    -   Variable scope (local vs global)
+    -   Memory allocation
+    -   Garbage collection
+    -   Reference counting
+    -   Namespaces
+-   Numbers
+    -   Integers
+    -   Floating-point numbers
+    -   Complex numbers
+    -   Number type conversion
+    -   Arithmetic operations
+    -   Math module functions
+    -   Numeric precision and limitations
+-   Strings
+    -   String creation and literals
+    -   String indexing and slicing
+    -   String methods
+    -   String formatting (f-strings, .format(), %-formatting)
+    -   String immutability
+    -   Unicode and encoding
+    -   Raw strings
+-   Booleans and Logic
+    -   Boolean values (True/False)
+    -   Logical operators (and, or, not)
+    -   Comparison operators
+    -   Truth value testing
+    -   Short-circuit evaluation
+-   Collections
+    -   Lists (creation, methods, comprehensions)
+    -   Tuples (creation, immutability, unpacking)
+    -   Dictionaries (creation, methods, comprehensions)
+    -   Sets (creation, methods, operations)
+    -   Frozen sets
+    -   Arrays
+    -   Collections module (Counter, defaultdict, OrderedDict, deque)
+-   Control Flow
+    -   Conditional statements (if, elif, else)
+    -   Ternary operator
+    -   Loops (for, while)
+    -   Loop control (break, continue, else)
+    -   Iterables and iterators
+    -   Generator expressions
+-   Functions
+    -   Function definition and calling
+    -   Parameters and arguments
+    -   Default arguments
+    -   Keyword arguments
+    -   Variable-length arguments (\*args, \*\*kwargs)
+    -   Return values
+    -   Docstrings
+    -   Lambda functions
+    -   Closures
+    -   Decorators
+    -   Recursive functions
+-   Data Structures
+    -   Arrays and dynamic arrays
+    -   Linked lists (singly, doubly, circular)
+    -   Stacks and implementation techniques
+    -   Queues and priority queues
+    -   Hash tables and collision resolution
+    -   Trees (binary, binary search, AVL, Red-Black)
+    -   Heaps (min-heap, max-heap)
+    -   Graphs (directed, undirected, weighted)
+    -   Tries
+    -   Disjoint-set (Union-Find)
+    -   Custom data structure design
+    -   Time and space complexity analysis
+-   Algorithms
+    -   Searching algorithms (linear, binary, breadth-first, depth-first)
+    -   Sorting algorithms (bubble, insertion, selection, merge, quick, heap, radix)
+    -   Recursion and backtracking
+    -   Dynamic programming
+    -   Greedy algorithms
+    -   Divide and conquer
+    -   Graph algorithms (shortest path, minimum spanning tree)
+    -   String algorithms (pattern matching, prefix trees)
+    -   Bit manipulation
+    -   Randomized algorithms
+    -   Approximation algorithms
+    -   Computational geometry
+-   Competitive Programming Techniques
+    -   Input/output optimization
+    -   Fast modular exponentiation
+    -   Matrix operations
+    -   Number theory algorithms (GCD, LCM, prime numbers)
+    -   Combinatorics
+    -   Sliding window technique
+    -   Two-pointer technique
+    -   Meet in the middle
+    -   Segment trees
+    -   Fenwick trees (Binary Indexed Trees)
+    -   Game theory algorithms (Minimax, Alpha-Beta pruning)
+    -   Problem-solving strategies
+-   LeetCode Problem Patterns
+    -   Array manipulations
+    -   String problems
+    -   Linked list operations
+    -   Tree traversals
+    -   Graph problems
+    -   Dynamic programming approaches
+    -   Backtracking problems
+    -   Design problems
+    -   Math problems
+    -   Interval problems
+    -   Top interview problem solutions
+    -   Weekly contest strategies
+-   Modules and Packages
+    -   Import statements
+    -   Module creation
+    -   Package structure
+    -   **init**.py files
+    -   Relative and absolute imports
+    -   Namespace packages
+    -   Module search path
+    -   Creating and distributing packages
+-   File I/O
+    -   File opening modes
+    -   Reading and writing text files
+    -   Context managers (with statement)
+    -   Working with CSV files
+    -   JSON serialization
+    -   Pickle serialization
+    -   Working with binary files
+    -   File system operations
+-   Error Handling
+    -   Exception hierarchy
+    -   Try/except/else/finally blocks
+    -   Raising exceptions
+    -   Creating custom exceptions
+    -   Assertions
+    -   Debugging techniques
+    -   Logging
+-   Object-Oriented Programming
+    -   Classes and objects
+    -   Constructors (**init** method)
+    -   Instance, class, and static methods
+    -   Properties and attributes
+    -   Inheritance
+    -   Multiple inheritance
+    -   Method resolution order
+    -   Abstract base classes
+    -   Encapsulation
+    -   Polymorphism
+    -   Magic/dunder methods
+    -   Dataclasses
+-   Functional Programming
+    -   First-class functions
+    -   Pure functions
+    -   Higher-order functions
+    -   Map, filter, reduce
+    -   Immutability
+    -   Function composition
+    -   Partial functions
+    -   Currying
+    -   Recursion in functional style
+    -   functools module
+-   Algorithm Analysis and Optimization
+    -   Big O notation
+    -   Time complexity analysis
+    -   Space complexity analysis
+    -   Amortized analysis
+    -   Algorithm optimization techniques
+    -   Profiling algorithms
+    -   Memory optimization
+    -   Trade-offs between approaches
+-   Data Processing
+    -   Working with CSV/TSV data
+    -   JSON and XML processing
+    -   Regular expressions
+    -   Text parsing and manipulation
+    -   Data validation and cleaning
+    -   Pandas basics for data manipulation
+    -   NumPy for numerical processing
+-   Date and Time
+    -   datetime module
+    -   time module
+    -   dateutil package
+    -   Time zones and UTC
+    -   Date calculations and manipulations
+    -   Date formatting and parsing
+    -   Timers and profiling
+-   Asynchronous Programming
+    -   Synchronous vs asynchronous code
+    -   async and await syntax
+    -   Coroutines
+    -   asyncio module
+    -   Event loops
+    -   Asynchronous context managers
+    -   Task scheduling and cancellation
+    -   Asynchronous generators
+    -   Handling blocking operations
+-   Concurrency and Parallelism
+    -   Threading module
+    -   Multiprocessing module
+    -   Global Interpreter Lock (GIL)
+    -   Thread safety
+    -   Process pools
+    -   Concurrent.futures module
+    -   Locks, semaphores, and barriers
+    -   Race conditions and deadlocks
+-   Memory Management and Optimization
+    -   Memory profiling
+    -   Code profiling
+    -   Performance optimization techniques
+    -   Caching and memoization
+    -   Generator memory advantages
+    -   Resource management
+    -   Garbage collection control
+-   Testing
+    -   Unit testing with unittest
+    -   Pytest framework
+    -   Test-driven development
+    -   Mocking and patching
+    -   Fixtures
+    -   Parameterized tests
+    -   Coverage analysis
+    -   Integration testing
+    -   Behavior-driven development
+-   Web Development
+    -   HTTP basics and requests
+    -   Flask framework
+    -   Django framework
+    -   FastAPI
+    -   RESTful API development
+    -   Web scraping with Beautiful Soup
+    -   Authentication and security
+    -   Templating engines
+    -   WSGI and ASGI servers
+-   Database Integration
+    -   SQL basics for Python
+    -   SQLite with sqlite3
+    -   SQLAlchemy ORM
+    -   Database connection management
+    -   Query optimization
+    -   Transactions
+    -   NoSQL databases (MongoDB, Redis)
+    -   Connection pooling
+-   Python Design Patterns
+    -   Creational patterns
+    -   Structural patterns
+    -   Behavioral patterns
+    -   Implementing common design patterns
+    -   Python-specific patterns
+-   Security Best Practices
+    -   Input validation
+    -   SQL injection prevention
+    -   Cross-site scripting protection
+    -   Secure password handling
+    -   Secrets management
+    -   HTTPS and TLS
+    -   Cryptography basics
+-   DevOps and Deployment
+    -   Environment management
+    -   Containerization with Docker
+    -   CI/CD pipelines
+    -   Deploy to cloud platforms
+    -   Serverless Python
+    -   Monitoring and logging
+    -   Configuration management
+-   Advanced Topics
+    -   Metaprogramming
+    -   Descriptors
+    -   Context managers
+    -   Itertools and functools modules
+    -   Typing and type hints
+    -   Python C extensions
+    -   Memory views
+    -   Python internals
+    -   Coroutines and generators
+-   Real-world Projects
+    -   Data analysis pipeline
+    -   Web application
+    -   API service
+    -   CLI application
+    -   Desktop application with Tkinter/PyQt
+    -   Machine learning project
+    -   Automation script
+    -   Game development with Pygame
+    -   Algorithmic problem solver
+    -   Coding competition simulator
+-   Interview Preparation
+    -   Technical interview strategies
+    -   Common Python interview questions
+    -   Data structure and algorithm interviews
+    -   System design with Python
+    -   Code optimization interviews
+    -   Mock interview exercises
+    -   Whiteboarding techniques
+    -   Time management during coding challenges
